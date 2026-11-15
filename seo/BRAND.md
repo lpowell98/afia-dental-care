@@ -8,7 +8,7 @@
 - Formerly: Parkway Dental (parkwaydental.site). Same office, same team.
 - Service area: West Roxbury and Boston, MA
 - Phone (one number, same everywhere): (617) 325-4100
-- Email: [practice email]
+- Email: info@afiadentalcare.com
 - Address: 1208B VFW Parkway, Suite 307 (Ingleside Mall), West Roxbury, MA 02132
 - Hours: Mon–Fri 9 am–5 pm, Sat 9 am–3 pm, Sun closed
 - Booking: Simplifeye self-scheduler (widget key IrHKYGy15IWvHMTRuLTQFkmMl23qGrJ). No booking forms on the site (HIPAA).
