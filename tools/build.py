@@ -6,7 +6,7 @@ src/partials/footer.html (shared footer). Never hand-edit the built
 .html files, robots.txt, sitemap.xml or llms.txt in site/; edit the
 sources and run:  python3 tools/build.py
 """
-import html, json, re, sys
+import hashlib, html, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -243,7 +243,10 @@ def build():
                            ver=ver, ld=graph(slug, title, body))
         out = OUT / ("index.html" if slug == "" else "404.html" if slug == "404" else f"{slug}/index.html")
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(head + body.rstrip() + "\n</body>\n</html>\n")
+        page = head + body.rstrip() + "\n</body>\n</html>\n"
+        # Version tag on photos so browsers and Cloudflare fetch new files when a photo changes
+        page = re.sub(r'(/img/[\w-]+\.webp)"', lambda m: f'{m.group(1)}?v={hashlib.md5((OUT / m.group(1)[1:]).read_bytes()).hexdigest()[:8]}"', page)
+        out.write_text(page)
         assert "{{" not in out.read_text(), out
 
     idx = [p[:4] for p in allp if p[3]]
