@@ -11,6 +11,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / "src", ROOT / "site"
+sys.path.insert(0, str(SRC))
+from services import SERVICES  # noqa: E402
+SVC = {x["slug"]: x for x in SERVICES}
 S = json.loads((ROOT / "site.json").read_text())
 UPDATED_ISO = "2026-11-14"          # change when page content changes
 UPDATED = "November 14, 2026"
@@ -59,9 +62,9 @@ def business():
     return b
 
 
-def faq(body):
+def faq(body, fid=None):
     qs = re.findall(r"<summary>(.*?)<span class=\"plus\"></span></summary><p>(.*?)</p>", body)
-    return {"@type": "FAQPage", "@id": f"{URL}/#faq", "mainEntity": [
+    return {"@type": "FAQPage", "@id": fid or f"{URL}/#faq", "mainEntity": [
         {"@type": "Question", "name": html.unescape(q),
          "acceptedAnswer": {"@type": "Answer", "text": html.unescape(re.sub("<[^>]+>", "", a))}}
         for q, a in qs]}
@@ -72,6 +75,17 @@ def graph(slug, title, body):
                       "name": S["name"], "publisher": {"@id": f"{URL}/#business"}}]
     if slug == "":
         g.append(faq(body))
+    elif slug in SVC:
+        sv = SVC[slug]
+        g.append({"@type": "Service", "@id": f"{page_url(slug)}#service", "name": title.split(" | ")[0],
+                  "serviceType": sv["name"].replace("®", ""), "description": sv["desc"], "url": page_url(slug),
+                  "provider": {"@id": f"{URL}/#business"},
+                  "areaServed": [{"@type": "Place", "name": n} for n in S["areaServed"]]})
+        g.append(faq(body, f"{page_url(slug)}#faq"))
+        g.append({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{URL}/"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": f"{URL}/#services"},
+            {"@type": "ListItem", "position": 3, "name": sv["name"], "item": page_url(slug)}]})
     elif slug != "404":
         g.append({"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{URL}/"},
@@ -114,14 +128,76 @@ HEAD = """<!doctype html>
 <body>
 """
 
-BAR = """<a class="skip" href="#main">Skip to content</a>
+HEADER = """<a class="skip" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="tooth" viewBox="0 0 22 24"><path d="M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z" fill="currentColor"/></symbol></svg>
 <header class="bar" id="top"><div class="wrap top">
+<nav aria-label="Primary"><a href="/#services">Services</a><a href="/#dentists">Dentists</a><a href="/dental-emergencies/">Emergencies</a><a href="/#faq">FAQ</a></nav>
 <a class="mark" href="/" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg>Afia Dental</a>
 <a class="tel" href="tel:+16173254100">(617) 325-4100</a>
 </div></header>
-<main id="main" class="wrap doc">
+"""
+
+BAR = HEADER + """<main id="main" class="wrap doc">
 {body}</main>
+"""
+
+SHORT = {
+    "dental-check-ups": "Exam, cleaning and oral cancer screening every six months.",
+    "preventative-dentistry": "Fluoride, sealants and habits that stop problems early.",
+    "dental-crowns-and-bridges": "Most crowns fitted in a single visit.",
+    "restorative-dentistry": "Fillings, crowns, bridges, implants and dentures.",
+    "dental-implants": "Permanent replacements for missing teeth, including All-on-4®.",
+    "invisalign": "Clear aligners that straighten teeth without metal braces.",
+    "cosmetic-dentistry": "Whitening, veneers, bonding and smile makeovers.",
+    "pediatric-dentistry": "Gentle visits for toddlers to teens, led by Dr. Bano.",
+    "tooth-extraction": "Simple and surgical extractions, including wisdom teeth.",
+    "dental-emergencies": "Same-day care for pain, chips and broken teeth.",
+}
+
+
+def tile(slug):
+    sv = SVC[slug]
+    return (f'<a class="tile" href="/{slug}/"><div class="stage"><div class="smile-img">'
+            f'<img src="/img/{sv["img"]}.webp" alt="" width="500" height="300" loading="lazy"></div></div>'
+            f'<h3>{sv["name"]}</h3><p>{SHORT[slug]}</p></a>')
+
+
+def service_body(sv):
+    from PIL import Image
+    w, h = Image.open(OUT / f"img/{sv['img']}.webp").size
+    h1 = sv["title"].split(" | ")[0]
+    secs = "".join(f'<h2>{hd}</h2>\n{bd.strip()}\n' for hd, bd in sv["sections"])
+    qs = "".join(f'<details name="faq"><summary>{q}<span class="plus"></span></summary><p>{a}</p></details>\n'
+                 for q, a in sv["faqs"])
+    rel = "".join(tile(r) for r in sv["related"])
+    return HEADER + f"""<main id="main">
+<section class="svc-hero"><div class="wrap svc-hero-in">
+<div class="svc-hero-text">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/#services">Services</a><span aria-hidden="true">/</span><span aria-current="page">{sv["name"]}</span></nav>
+<h1>{h1}</h1>
+<p class="svc-lead">{sv["lead"]}</p>
+<div class="hero-actions"><a class="btn" href="/#book" data-book>Request an appointment</a><a class="btn ghost" href="tel:+16173254100">Call (617) 325-4100</a></div>
+</div>
+<div class="svc-hero-img smile-img"><img src="/img/{sv["img"]}.webp" alt="{sv["alt"]}" width="{w}" height="{h}" fetchpriority="high"></div>
+</div></section>
+<div class="wrap svc-body">
+<article class="svc-article">
+{secs}<h2 id="faq-h">Frequently asked questions</h2>
+<div class="qs">
+{qs}</div>
+</article>
+<div class="svc-side"><div class="side-card">
+<p class="side-h">Book a visit</p>
+<p>New patients: <strong>$139</strong> exam, cleaning and four digital X-rays. Emergency exam <strong>$59</strong>.</p>
+<a class="btn" href="/#book" data-book>Request an appointment</a>
+<a class="side-tel" href="tel:+16173254100">(617) 325-4100</a>
+<p class="side-small">Mon–Fri 9–5 · Sat 9–3 · Sun closed<br>1208B VFW Parkway, Suite 307, West Roxbury</p>
+</div></div>
+</div>
+<section class="wrap svc-related" aria-labelledby="rel-h"><h2 id="rel-h">Related services</h2><div class="tiles rel">{rel}</div></section>
+</main>
+
+{{{{FOOTER}}}}
 """
 
 
@@ -130,11 +206,15 @@ def build():
     ver = hashlib.md5((OUT / "css/site.css").read_bytes() + (OUT / "js/site.js").read_bytes()).hexdigest()[:8]
     footer = (SRC / "partials/footer.html").read_text()
     email_sentence = f", email <a href=\"mailto:{S['email']}\">{S['email']}</a>," if S.get("email") else ","
-    for slug, title, desc, index in PAGES:
+    allp = [(s_, t, d, i, None) for s_, t, d, i in PAGES] + [(x["slug"], x["title"], x["desc"], True, service_body(x)) for x in SERVICES]
+    for slug, title, desc, index, sbody in allp:
         assert len(title) <= 60, (slug, len(title))
-        body = (SRC / f"pages/{slug or 'index'}.html").read_text()
-        if slug:
-            body = BAR.format(body=body) + "\n{{FOOTER}}\n"
+        if sbody:
+            body = sbody
+        else:
+            body = (SRC / f"pages/{slug or 'index'}.html").read_text()
+            if slug:
+                body = BAR.format(body=body) + "\n{{FOOTER}}\n"
         body = body.replace("{{FOOTER}}", footer)
         body = body.replace("{{UPDATED}}", UPDATED).replace("{{EMAIL_SENTENCE}}", email_sentence)
         head = HEAD.format(title=html.escape(title), desc=html.escape(desc), canon=page_url(slug),
@@ -146,7 +226,7 @@ def build():
         out.write_text(head + body.rstrip() + "\n</body>\n</html>\n")
         assert "{{" not in out.read_text(), out
 
-    idx = [p for p in PAGES if p[3]]
+    idx = [p[:4] for p in allp if p[3]]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{page_url(s)}</loc><lastmod>{UPDATED_ISO}</lastmod></url>\n" for s, *_ in idx)
@@ -161,7 +241,7 @@ def build():
         f"- Dentists: " + "; ".join(f"{d['name']} ({d['focus'].lower()})" for d in S["dentists"]) + "\n"
         f"- Book online: {URL}/#book\n\n## Pages\n\n"
         + "".join(f"- [{t.split(' | ')[0]}]({page_url(s)}): {d}\n" for s, t, d, _ in idx))
-    print("built", len(PAGES), "pages, version", ver)
+    print("built", len(allp), "pages, version", ver)
 
 
 if __name__ == "__main__":
