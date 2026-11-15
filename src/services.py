@@ -13,7 +13,7 @@ SERVICES = [
  "name": "Dental Implants",
  "title": "Dental Implants in West Roxbury, MA | Afia Dental",
  "desc": "Replace missing teeth with dental implants in West Roxbury, MA: single implants, bridges and full-arch options like All-on-4®, with clear estimates and financing.",
- "img": "implants", "alt": "Dentist holding a model of an implant-supported denture",
+ "img": "implants", "alt": "Gloved hands holding a model of an implant-supported denture",
  "lead": "Missing teeth can make eating, speaking and smiling harder. Dental implants are a permanent, natural-looking fix: they act as artificial roots that hold new teeth firmly in place, so they look, feel and work like your own.",
  "sections": [
   ("The dental implant process", """
@@ -51,7 +51,7 @@ SERVICES = [
  "name": "Invisalign®",
  "title": "Invisalign in West Roxbury, MA | Afia Dental",
  "desc": "Straighten your teeth with Invisalign® clear aligners in West Roxbury, MA. Discreet, removable and comfortable, for adults and teens. Call (617) 325-4100.",
- "img": "invisalign", "alt": "Patient smiling during a dental visit",
+ "img": "invisalign", "alt": "Patient holding a clear aligner as her dentist explains",
  "lead": "Invisalign® straightens teeth with a series of nearly invisible, removable trays instead of metal brackets and wires. It treats crowding, gaps and many bite problems, and fits into your daily routine.",
  "sections": [
   ("How Invisalign® works", """
@@ -84,7 +84,7 @@ SERVICES = [
  "name": "Cosmetic Dentistry",
  "title": "Cosmetic Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Teeth whitening, veneers, bonding, Invisalign® and natural-looking crowns in West Roxbury, MA. A small touch-up or a full smile makeover, planned around you.",
- "img": "same-day-crowns", "alt": "Dentist matching a patient’s tooth shade",
+ "img": "same-day-crowns", "alt": "Smiling patient as her dentist matches a tooth shade",
  "lead": "Want to love your smile again? We brighten, reshape and restore teeth with natural-looking results, from professional whitening and bonding to veneers, Invisalign® and all-ceramic crowns. Whether you want a small touch-up or a full makeover, we plan it around your goals.",
  "sections": [
   ("When to consider cosmetic dentistry", """
@@ -119,7 +119,7 @@ SERVICES = [
  "name": "Crowns & Bridges",
  "title": "Dental Crowns and Bridges in West Roxbury, MA | Afia Dental",
  "desc": "Dental crowns and bridges in West Roxbury, MA, including same-day crowns. Restore broken, decayed or missing teeth with natural-looking results.",
- "img": "same-day-crowns", "alt": "Dentist matching a patient’s tooth shade",
+ "img": "same-day-crowns", "alt": "Smiling patient as her dentist matches a tooth shade",
  "lead": "When a cavity is too large for a filling, or a tooth is cracked or broken, a crown (also called a cap) restores its strength, shape and look. A bridge uses crowns on neighboring teeth to replace a missing tooth. Most crowns are fitted in a single visit.",
  "sections": [
   ("What a dental crown does", """
@@ -155,7 +155,7 @@ SERVICES = [
  "name": "Tooth Extraction",
  "title": "Tooth Extraction in West Roxbury, MA | Afia Dental",
  "desc": "Gentle simple and surgical tooth extractions, including wisdom teeth, in West Roxbury, MA. Comfort-first care, clear aftercare and same-day emergencies.",
- "img": "family", "alt": "Family with their dental team",
+ "img": "family", "alt": "Smiling boy in the dental chair with his dental team",
  "lead": "When a tooth can’t be saved, we remove it gently and safely to relieve pain and protect the rest of your mouth. We always try to keep your natural teeth first, and when removal is the right choice, we make it as comfortable as possible.",
  "sections": [
   ("When an extraction is needed", """
@@ -186,7 +186,7 @@ SERVICES = [
  "name": "Preventative Dentistry",
  "title": "Preventative Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Exams, cleanings, digital X-rays, fluoride and sealants in West Roxbury, MA. Stop cavities and gum disease early with a prevention plan made for you.",
- "img": "cleanings", "alt": "Hygienist cleaning a patient’s teeth",
+ "img": "cleanings", "alt": "Smiling patient with her hygienist and dentist during a check-up",
  "lead": "Healthy smiles start with simple habits and regular visits. Check-ups, cleanings, digital X-rays and personal advice help us stop cavities and gum disease before they start, so you avoid bigger, costlier treatment later.",
  "sections": [
   ("Why prevention matters", """
@@ -214,7 +214,7 @@ SERVICES = [
  "name": "Check-ups & Cleanings",
  "title": "Dental Check-ups in West Roxbury, MA | Afia Dental",
  "desc": "Dental check-ups and cleanings in West Roxbury, MA: exam, professional cleaning, oral cancer screening and digital X-rays. New patients $139. Book online.",
- "img": "cleanings", "alt": "Hygienist cleaning a patient’s teeth",
+ "img": "cleanings", "alt": "Smiling patient with her hygienist and dentist during a check-up",
  "lead": "Regular check-ups are the foundation of a healthy smile. Whether it’s your first visit or your first in a while, a routine exam catches small problems before they grow, and a professional cleaning keeps your teeth and gums healthy between visits. New patients start with a <strong>$139 visit</strong>: exam, cleaning and 4 digital X-rays.",
  "sections": [
   ("The exam", """
@@ -245,7 +245,7 @@ SERVICES = [
  "name": "Restorative Dentistry",
  "title": "Restorative Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Tooth-colored fillings, crowns, bridges, implants and dentures in West Roxbury, MA. Repair damaged teeth and replace missing ones with natural-looking results.",
- "img": "same-day-crowns", "alt": "Dentist matching a patient’s tooth shade",
+ "img": "same-day-crowns", "alt": "Smiling patient as her dentist matches a tooth shade",
  "lead": "A damaged or missing tooth makes everyday things like eating, speaking and smiling harder. Restorative dentistry repairs teeth, replaces what’s missing and brings your smile back to full function, from tooth-colored fillings to crowns, bridges, implants and dentures.",
  "sections": [
   ("Benefits of restorative dentistry", """
@@ -273,7 +273,7 @@ SERVICES = [
  "name": "Pediatric Dentistry",
  "title": "Pediatric Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Gentle children’s dentistry in West Roxbury, MA with Dr. Eriselda Bano: first visits, cleanings, fluoride, sealants, fillings and kids’ emergencies.",
- "img": "pediatric", "alt": "Child in the dental chair with a parent nearby",
+ "img": "pediatric", "alt": "Smiling girl in the dental chair with her mother and dentist",
  "lead": "Your child’s smile deserves gentle, careful attention. Dr. Eriselda Bano makes every visit calm and positive, from the first baby tooth to the teen years, helping kids build healthy habits and treating problems early.",
  "sections": [
   ("Why baby teeth matter", """
@@ -308,7 +308,7 @@ SERVICES = [
  "name": "Emergency Dentist",
  "title": "Emergency Dentist in West Roxbury, MA | Afia Dental",
  "desc": "Severe toothache, broken or knocked-out tooth? Same-day emergency dental care in West Roxbury, MA. $59 emergency exam. Call (617) 325-4100 now.",
- "img": "family", "alt": "Family with their dental team",
+ "img": "family", "alt": "Smiling boy in the dental chair with his dental team",
  "lead": "Severe toothache? Broken or knocked-out tooth? We keep time in our schedule every day for emergencies, so you don’t have to wait in pain. Call {call} now and we’ll do everything we can to see you today. Emergency exams are <strong>$59</strong>.",
  "sections": [
   ("When to call an emergency dentist", """
