@@ -58,6 +58,8 @@
   function openScheduler(){
     window.postMessage(JSON.stringify({source:'simplifeye',type:'open-self-scheduling-widget',target:'selfSchedulingWidget',startingUrl:location.href}),'*');
   }
+  var live=document.createElement('div');live.className='sr';live.setAttribute('role','status');live.setAttribute('aria-live','polite');document.body.appendChild(live);
+  function say(t){live.textContent='';setTimeout(function(){live.textContent=t},50)}
   function loadScheduler(){
     if(sfLoading)return;sfLoading=true;
     window._SELF_SCHEDULING_WIDGET_CONF=window._SELF_SCHEDULING_WIDGET_CONF||{};
@@ -74,11 +76,14 @@
   }).observe(document.body,{childList:true,subtree:true});
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('[data-book]');
-    if(!a)return;
+    if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
     e.preventDefault();
     if(schedulerReady()){openScheduler();return}
     if(sfPending)return;sfPending=true;
     document.documentElement.style.cursor='progress';
+    var label=a.innerHTML,isBtn=a.classList.contains('btn');
+    if(isBtn)a.textContent='Opening scheduler…';
+    a.setAttribute('aria-busy','true');say('Opening the online scheduler…');
     loadScheduler();
     var t0=Date.now();
     (function wait(){
@@ -86,6 +91,6 @@
       if(Date.now()-t0>8000){done();location.href=a.getAttribute('href')||'tel:+16173254100';return}
       setTimeout(wait,150);
     })();
-    function done(){sfPending=false;document.documentElement.style.cursor=''}
+    function done(){sfPending=false;document.documentElement.style.cursor='';if(isBtn)a.innerHTML=label;a.removeAttribute('aria-busy')}
   });
 })();

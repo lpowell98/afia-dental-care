@@ -65,7 +65,7 @@ def business():
 def faq(body, fid=None):
     qs = re.findall(r"<summary>(.*?)<span class=\"plus\"></span></summary><p>(.*?)</p>", body)
     return {"@type": "FAQPage", "@id": fid or f"{URL}/#faq", "mainEntity": [
-        {"@type": "Question", "name": html.unescape(q),
+        {"@type": "Question", "name": html.unescape(re.sub("<[^>]+>", "", q)),
          "acceptedAnswer": {"@type": "Answer", "text": html.unescape(re.sub("<[^>]+>", "", a))}}
         for q, a in qs]}
 
@@ -132,7 +132,7 @@ HEADER = """<a class="skip" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="tooth" viewBox="0 0 22 24"><path d="M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z" fill="currentColor"/></symbol></svg>
 <header class="bar" id="top"><div class="wrap top">
 <nav aria-label="Primary"><a href="/#services">Services</a><a href="/#dentists">Dentists</a><a href="/dental-emergencies/">Emergencies</a><a href="/#faq">FAQ</a></nav>
-<a class="mark" href="/" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg>Afia Dental</a>
+<a class="mark" href="/" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg><span translate="no">Afia Dental</span></a>
 <a class="tel" href="tel:+16173254100">(617) 325-4100</a>
 </div></header>
 """
@@ -156,26 +156,33 @@ SHORT = {
 
 
 def tile(slug):
+    from PIL import Image
     sv = SVC[slug]
+    iw, ih = Image.open(OUT / f"img/{sv['img']}.webp").size
     return (f'<a class="tile" href="/{slug}/"><div class="stage"><div class="smile-img">'
-            f'<img src="/img/{sv["img"]}.webp" alt="" width="500" height="300" loading="lazy"></div></div>'
-            f'<h3>{sv["name"]}</h3><p>{SHORT[slug]}</p></a>')
+            f'<img src="/img/{sv["img"]}.webp" alt="" width="{iw}" height="{ih}" loading="lazy"></div></div>'
+            f'<h3>{notr(sv["name"])}</h3><p>{SHORT[slug]}</p></a>')
+
+
+def notr(t):
+    """Keep brand names out of browser auto-translation in visible copy."""
+    return re.sub(r"(Invisalign®?(?: Teen)?|All-on-4®|Afia Dental)", r'<span translate="no">\1</span>', t)
 
 
 def service_body(sv):
     from PIL import Image
     w, h = Image.open(OUT / f"img/{sv['img']}.webp").size
     h1 = sv["title"].split(" | ")[0]
-    secs = "".join(f'<h2>{hd}</h2>\n{bd.strip()}\n' for hd, bd in sv["sections"])
-    qs = "".join(f'<details name="faq"><summary>{q}<span class="plus"></span></summary><p>{a}</p></details>\n'
-                 for q, a in sv["faqs"])
+    secs = notr("".join(f'<h2>{hd}</h2>\n{bd.strip()}\n' for hd, bd in sv["sections"]))
+    qs = notr("".join(f'<details name="faq"><summary>{q}<span class="plus"></span></summary><p>{a}</p></details>\n'
+                 for q, a in sv["faqs"]))
     rel = "".join(tile(r) for r in sv["related"])
     return HEADER + f"""<main id="main">
 <section class="svc-hero"><div class="wrap svc-hero-in">
 <div class="svc-hero-text">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/#services">Services</a><span aria-hidden="true">/</span><span aria-current="page">{sv["name"]}</span></nav>
-<h1>{h1}</h1>
-<p class="svc-lead">{sv["lead"]}</p>
+<h1>{notr(h1)}</h1>
+<p class="svc-lead">{notr(sv["lead"])}</p>
 <div class="hero-actions"><a class="btn" href="/#book" data-book>Request an appointment</a><a class="btn ghost" href="tel:+16173254100">Call (617) 325-4100</a></div>
 </div>
 <div class="svc-hero-img smile-img"><img src="/img/{sv["img"]}.webp" alt="{sv["alt"]}" width="{w}" height="{h}" fetchpriority="high"></div>
@@ -188,7 +195,7 @@ def service_body(sv):
 </article>
 <div class="svc-side"><div class="side-card">
 <p class="side-h">Book a visit</p>
-<p>New patients: <strong>$139</strong> exam, cleaning and four digital X-rays. Emergency exam <strong>$59</strong>.</p>
+<p>New patients: <strong>$139</strong> exam, cleaning and 4 digital X-rays. Emergency exam <strong>$59</strong>.</p>
 <a class="btn" href="/#book" data-book>Request an appointment</a>
 <a class="side-tel" href="tel:+16173254100">(617) 325-4100</a>
 <p class="side-small">Mon–Fri 9–5 · Sat 9–3 · Sun closed<br>1208B VFW Parkway, Suite 307, West Roxbury</p>
@@ -237,7 +244,7 @@ def build():
         f"# {S['name']}\n\n> {S['description']}\n\n"
         f"- Address: {a['streetAddress']}, {a['addressLocality']}, {a['addressRegion']} {a['postalCode']} (Ingleside Mall)\n"
         f"- Phone: {S['phoneDisplay']}\n- Hours: Mon-Fri 9 am-5 pm, Sat 9 am-3 pm, Sun closed\n"
-        f"- New-patient visit $139 (exam, cleaning, four digital X-rays); emergency exam $59\n"
+        f"- New-patient visit $139 (exam, cleaning, 4 digital X-rays); emergency exam $59\n"
         f"- Dentists: " + "; ".join(f"{d['name']} ({d['focus'].lower()})" for d in S["dentists"]) + "\n"
         f"- Book online: {URL}/#book\n\n## Pages\n\n"
         + "".join(f"- [{t.split(' | ')[0]}]({page_url(s)}): {d}\n" for s, t, d, _ in idx))

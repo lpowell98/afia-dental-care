@@ -334,8 +334,8 @@ footer{background:var(--deep);color:var(--on-deep);padding-block:clamp(48px,5vw,
 .doc ul{padding-left:1.2em;margin:0 0 14px}
 .doc a{text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:4px}
 @media (max-width:720px){.book-actions{padding:32px 24px}}
-section[id],[id="book"]{scroll-margin-top:16px}
-a,button,summary{touch-action:manipulation}
+section[id],[id="book"],h2[id],h3[id]{scroll-margin-top:16px}
+a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(214,166,83,.25)}
 iframe[id^="self-scheduling-widget-button-iframe"]{display:none!important}
 
 /* ───── service pages ───── */

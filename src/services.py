@@ -21,7 +21,7 @@ SERVICES = [
 <p>To place the implant, we make a small opening in the gum and set the implant post into the jawbone, then close the gum around it. If needed, we fit a temporary tooth so you don’t have a gap while you heal.</p>
 <p>Over the next several weeks the implant fuses with the bone, a process called <strong>osseointegration</strong>. Once it’s solid, we attach an abutment and your final crown, bridge or denture. If the jawbone is thin, a bone graft or sinus lift may come first to make sure the implant lasts.</p>"""),
   ("Single, multiple and full-arch implants", """
-<p>Every plan is built around your mouth. We replace a single tooth with one implant and a crown, several teeth with an implant-supported bridge, or a full arch with options like <strong>All-on-4®</strong>, where four implants anchor a fixed set of teeth.</p>
+<p>Every plan is built around your mouth. We replace a single tooth with one implant and a crown, several teeth with an implant-supported bridge, or a full arch with options like <strong>All-on-4®</strong>, where 4 implants anchor a fixed set of teeth.</p>
 <p>All-on-4® suits people with several missing, failing or badly damaged teeth, and denture wearers who want something that doesn’t slip. Some patients can leave with a full set of fixed teeth on the day of surgery; we’ll tell you if you qualify.</p>"""),
   ("Benefits of dental implants", """
 <ul>
@@ -32,7 +32,7 @@ SERVICES = [
 <li><strong>Looks real.</strong> Crowns are color-matched to your teeth, so most people can’t tell the difference.</li>
 </ul>"""),
   ("After the procedure", """
-<p>Mild swelling, tenderness or a little bleeding is normal for a few days and usually eases with over-the-counter pain relief. Stick to soft foods for the first week. Dissolvable stitches usually fall out within 7–10 days. We give you written aftercare instructions and you can call us with any questions.</p>"""),
+<p>Mild swelling, tenderness or a little bleeding is normal for a few days and usually eases with over-the-counter pain relief. Stick to soft foods for the first week. Dissolvable stitches usually fall out within 7–10&nbsp;days. We give you written aftercare instructions and you can call us with any questions.</p>"""),
   ("Caring for your implants", """
 <p>Treat implants like natural teeth: brush twice a day, floss daily and keep up with check-ups and cleanings. If you have implant-supported dentures, take them out at night and soak them in a cleaning solution. A water flosser helps clean around the gumline.</p>"""),
  ],
@@ -40,7 +40,7 @@ SERVICES = [
   ("How much do dental implants cost in West Roxbury?", "It depends on whether you need one implant, several, or a full arch like All-on-4®. We give you a personal estimate at your consultation and offer flexible financing."),
   ("Who is a good candidate for dental implants?", "Most healthy adults. Good candidates have healthy gums, enough jawbone and no uncontrolled health conditions. If bone is thin, a bone graft can often make implants possible."),
   ("Do dental implants hurt?", "Implants are placed with local anesthesia, so most people feel only pressure. Some soreness for a few days afterward is normal and easy to manage."),
-  ("How long does the implant process take?", "Usually 3 to 6 months from placement to final crown, to give the implant time to fuse with the bone. Some patients qualify for same-day teeth with All-on-4®."),
+  ("How long does the implant process take?", "Usually 3 to 6&nbsp;months from placement to final crown, to give the implant time to fuse with the bone. Some patients qualify for same-day teeth with All-on-4®."),
   ("What’s the difference between implants and dentures?", "Implants are fixed in place and work like natural teeth. Dentures are removable and can slip or affect speech. Many patients choose implants for comfort and stability."),
   ("Do you offer financing for implants?", "Yes. We work with most dental insurance plans and offer payment options so you can start treatment sooner."),
  ],
@@ -56,7 +56,7 @@ SERVICES = [
  "sections": [
   ("How Invisalign® works", """
 <p>Treatment starts with a consultation. Dr. Raza Baig, who is certified in Invisalign, checks your teeth and talks through your goals. We take digital scans (no messy impressions) and build a 3D plan that shows how your teeth will move, step by step.</p>
-<p>You wear each set of aligners <strong>20–22 hours a day</strong>, taking them out only to eat, drink, brush and floss, and switch to a new set every one to two weeks. Most patients notice changes within a few weeks, and many finish in <strong>6 to 12 months</strong>, depending on the case.</p>"""),
+<p>You wear each set of aligners <strong>20–22&nbsp;hours a day</strong>, taking them out only to eat, drink, brush and floss, and switch to a new set every one to two weeks. Most patients notice changes within a few weeks, and many finish in <strong>6 to 12&nbsp;months</strong>, depending on the case.</p>"""),
   ("How your trays are made", """
 <p>Your scans and treatment plan go to the Invisalign lab, where your aligners are custom-made from a smooth, flexible material called SmartTrack and trimmed to your gumline for comfort. When they arrive, we check the fit and show you how to wear and clean them. Most patients start within a few weeks.</p>"""),
   ("Benefits of Invisalign®", """
@@ -67,11 +67,11 @@ SERVICES = [
 <li><strong>Healthier teeth.</strong> Straight teeth are easier to clean, which lowers the risk of plaque, cavities and gum disease.</li>
 </ul>"""),
   ("Check-ups during treatment", """
-<p>At your first fitting we may place small tooth-colored attachments on a few teeth. They help the aligners grip and guide your teeth, and they come off when treatment ends. After that you’ll visit about every <strong>6 to 8 weeks</strong> so we can check progress and give you your next trays.</p>"""),
+<p>At your first fitting we may place small tooth-colored attachments on a few teeth. They help the aligners grip and guide your teeth, and they come off when treatment ends. After that you’ll visit about every <strong>6 to 8&nbsp;weeks</strong> so we can check progress and give you your next trays.</p>"""),
  ],
  "faqs": [
   ("How much does Invisalign cost in West Roxbury?", "It depends on how complex your case is and how long treatment takes. You’ll get a clear estimate at your consultation, and we’ll review insurance and monthly payment options."),
-  ("How long does Invisalign take?", "Most cases take 6 to 12 months. Simple cases can be faster; complex ones take longer. We’ll give you a personal timeline at your first visit."),
+  ("How long does Invisalign take?", "Most cases take 6 to 12&nbsp;months. Simple cases can be faster; complex ones take longer. We’ll give you a personal timeline at your first visit."),
   ("Can Invisalign fix overbites, gaps or crowded teeth?", "Yes, for mild to moderate crowding, spacing and many bite problems. If another treatment would work better for you, we’ll tell you."),
   ("Do you treat teens with Invisalign?", "Yes. Invisalign Teen includes features that help track wear time, which is useful for younger patients."),
   ("Can I take my aligners out to eat?", "Yes. Take them out to eat and drink anything other than water, then brush and put them back in."),
@@ -107,7 +107,7 @@ SERVICES = [
  "faqs": [
   ("How long do cosmetic treatments take?", "Whitening can be done in one visit. Veneers take a few weeks, and Invisalign® takes months. We’ll tell you the timeline for your plan at your consultation."),
   ("Do cosmetic treatments hurt?", "Most are comfortable and minimally invasive. We use gentle techniques and numbing when needed."),
-  ("How long does professional whitening last?", "Usually 6 months to 2 years, depending on habits. Brushing, flossing, limiting coffee, tea and red wine, and regular cleanings help it last."),
+  ("How long does professional whitening last?", "Usually 6&nbsp;months to 2&nbsp;years, depending on habits. Brushing, flossing, limiting coffee, tea and red wine, and regular cleanings help it last."),
   ("What types of crowns do you offer?", "Porcelain, ceramic, resin and metal. Porcelain and ceramic blend in best; metal is very durable for back teeth. We’ll recommend the best fit for your smile and budget."),
   ("What if I don’t have insurance?", "We accept major credit cards and offer financing and payment plans for veneers, whitening, Invisalign and other treatments."),
   ("Do you offer cosmetic care for teens?", "Yes. Teens often come in for Invisalign, bonding or whitening, for example before graduation."),
@@ -144,7 +144,7 @@ SERVICES = [
  "faqs": [
   ("Does getting a crown hurt?", "We numb the area, so you shouldn’t feel pain. Mild sensitivity for a few days afterward is normal. If soreness lasts, call us so we can check the fit."),
   ("Will my crown look natural?", "Yes. We match the shade to your teeth, so modern crowns are hard to tell apart from natural ones."),
-  ("How long do crowns last?", "Usually 5 to 15 years or more, depending on the material and your habits. Regular check-ups help us spot wear early."),
+  ("How long do crowns last?", "Usually 5 to 15&nbsp;years or more, depending on the material and your habits. Regular check-ups help us spot wear early."),
   ("Does insurance cover crowns?", "Crowns that are part of treating decay or damage are often covered in part. The material affects cost, so we’ll review options and your coverage with you."),
   ("What are the alternatives to a crown?", "For smaller damage, a filling, inlay or onlay may be enough. If a tooth can’t be saved, extraction followed by an implant or bridge may be best. We’ll go over the options."),
  ],
@@ -173,7 +173,7 @@ SERVICES = [
 <p>After healing, you can replace the tooth with a <a href="/dental-implants/">dental implant</a>, a <a href="/dental-crowns-and-bridges/">bridge</a> or a partial denture. Implants are the most stable, bridges restore function quickly, and partials are an affordable option for several missing teeth.</p>"""),
  ],
  "faqs": [
-  ("How long does recovery take?", "Most simple extractions heal in 3–5 days. Surgical extractions, like wisdom teeth, can take 1–2 weeks. Following the aftercare instructions speeds healing."),
+  ("How long does recovery take?", "Most simple extractions heal in 3–5&nbsp;days. Surgical extractions, like wisdom teeth, can take 1–2&nbsp;weeks. Following the aftercare instructions speeds healing."),
   ("Is a tooth extraction painful?", "You won’t feel pain during the procedure because the area is numb, and sedation is available. Some soreness afterward is normal and manageable with over-the-counter pain relievers."),
   ("Do you do emergency extractions?", "Yes. For severe pain, swelling or infection, call (617) 325-4100 and we’ll do our best to see you the same day."),
   ("How much does an extraction cost?", "It depends on whether it’s simple or surgical. You’ll get a clear estimate before treatment. We accept most insurance plans and offer payment plans."),
@@ -215,7 +215,7 @@ SERVICES = [
  "title": "Dental Check-ups in West Roxbury, MA | Afia Dental",
  "desc": "Dental check-ups and cleanings in West Roxbury, MA: exam, professional cleaning, oral cancer screening and digital X-rays. New patients $139. Book online.",
  "img": "cleanings", "alt": "Hygienist cleaning a patient’s teeth",
- "lead": "Regular check-ups are the foundation of a healthy smile. Whether it’s your first visit or your first in a while, a routine exam catches small problems before they grow, and a professional cleaning keeps your teeth and gums healthy between visits. New patients start with a <strong>$139 visit</strong>: exam, cleaning and four digital X-rays.",
+ "lead": "Regular check-ups are the foundation of a healthy smile. Whether it’s your first visit or your first in a while, a routine exam catches small problems before they grow, and a professional cleaning keeps your teeth and gums healthy between visits. New patients start with a <strong>$139 visit</strong>: exam, cleaning and 4 digital X-rays.",
  "sections": [
   ("The exam", """
 <p>We start by talking about your dental history, medications, health conditions, allergies and any worries you have. Being open with us helps us care for you well. Then we examine your teeth, gums and bite for decay, sores, gum recession and gum pockets, which can be an early sign of gum disease. Every check-up includes an oral cancer screening.</p>"""),
@@ -233,7 +233,7 @@ SERVICES = [
  ],
  "faqs": [
   ("How often should I come in?", "Every six months for most people. Waiting longer gives plaque time to harden into tartar, which can lead to cavities and gum disease."),
-  ("What does the $139 new-patient visit include?", "A full exam, a professional cleaning and four digital X-rays."),
+  ("What does the $139 new-patient visit include?", "A full exam, a professional cleaning and 4 digital X-rays."),
   ("What’s the difference between a check-up and a dental exam?", "They overlap. A comprehensive exam, usually for new patients, also looks at the head and neck and gives us a complete picture of your oral health."),
   ("Why do I need X-rays?", "They show decay, infection and bone problems below the gumline and between teeth that we can’t see in the mirror."),
   ("What if it’s been years since my last visit?", "That’s common and nothing to be embarrassed about. We’ll start where you are and make a plan together."),
