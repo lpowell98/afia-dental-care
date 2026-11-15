@@ -64,6 +64,10 @@ p{margin:0}
 .hero h1{font-size:var(--step-hero);line-height:.9;letter-spacing:-.05em}
 .hero h1 span{display:inline-block}
 .arc{display:block;width:min(40%,480px);margin:clamp(6px,1vw,14px) auto 0;color:var(--gold)}
+.hero-afia{display:block!important;margin:clamp(10px,1.4vw,18px) auto 0;width:fit-content}
+.hero-afia svg{display:block;height:clamp(92px,14vw,190px);aspect-ratio:364/158;width:auto}
+.hero .arc{width:clamp(110px,16vw,226px)}
+.hero-dental{display:block;margin:clamp(12px,1.6vw,22px) auto 0;height:clamp(14px,1.6vw,22px);aspect-ratio:236/23;width:auto;margin-bottom:clamp(8px,1.4vw,18px);color:var(--on-deep)}
 .hero-sub{max-width:44ch;margin:clamp(18px,2vw,26px) auto 0;font-size:var(--step-lead);line-height:1.35;color:var(--on-deep)}
 .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:clamp(22px,2.4vw,32px)}
 .btn.ghost{background:transparent;color:var(--on-deep);box-shadow:inset 0 0 0 2px rgba(241,245,243,.4)}
