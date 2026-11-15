@@ -25,9 +25,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://embed.simplifeye.co" crossorigin>
 <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=b953d802">
+<link rel="stylesheet" href="/css/site.css?v=86a62679">
 <script>document.documentElement.classList.add('js')</script>
-<script src="/js/site.js?v=b953d802" defer></script>
+<script src="/js/site.js?v=86a62679" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dentist","@id":"https://afiadentalcare.com/#business","name":"Afia Dental","legalName":"Afia Dental","url":"https://afiadentalcare.com/","description":"Family and cosmetic dentistry in West Roxbury, MA, for over 40 years. Cleanings, same-day crowns, implants, Invisalign, pediatric care and same-day emergencies.","telephone":"+1-617-325-4100","logo":"https://afiadentalcare.com/icon-512.png","image":"https://afiadentalcare.com/img/og-home.png","address":{"@type":"PostalAddress","streetAddress":"1208B VFW Parkway, Suite 307","addressLocality":"West Roxbury","addressRegion":"MA","postalCode":"02132","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"15:00"}],"priceRange":"$$","hasMap":"https://maps.app.goo.gl/dJfXv5TkRu6kLrTt7","sameAs":["https://maps.google.com/?cid=10034673862898343424"],"areaServed":[{"@type":"Place","name":"West Roxbury, MA"},{"@type":"Place","name":"Boston, MA"}],"contactPoint":{"@type":"ContactPoint","telephone":"+1-617-325-4100","contactType":"appointments","areaServed":"US","availableLanguage":"en"},"employee":[{"@type":"Person","name":"Dr. Raza Baig, DMD","jobTitle":"Restorative and cosmetic dentistry"},{"@type":"Person","name":"Dr. Eriselda Bano","jobTitle":"Pediatric dentistry"},{"@type":"Person","name":"Dr. Suky Sidhu","jobTitle":"Smile makeovers, Invisalign and veneers"},{"@type":"Person","name":"Dr. Natalie Sokoloff, DDS","jobTitle":"General, restorative and preventive care"}],"email":"info@afiadentalcare.com"},{"@type":"WebSite","@id":"https://afiadentalcare.com/#website","url":"https://afiadentalcare.com/","name":"Afia Dental","publisher":{"@id":"https://afiadentalcare.com/#business"}},{"@type":"FAQPage","@id":"https://afiadentalcare.com/#faq","mainEntity":[{"@type":"Question","name":"Do you accept my dental insurance?","acceptedAnswer":{"@type":"Answer","text":"We accept most major dental plans. Coverage varies, so call (617) 325-4100 and we’ll confirm yours before your visit."}},{"@type":"Question","name":"What if I don’t have insurance?","acceptedAnswer":{"@type":"Answer","text":"We offer flexible payment options and will build a treatment and payment plan that fits your budget."}},{"@type":"Question","name":"Can you see me today for an emergency?","acceptedAnswer":{"@type":"Answer","text":"Usually, yes. For severe pain, a broken tooth or a lost crown, call us right away and we’ll do everything we can to see you the same day."}},{"@type":"Question","name":"Do you treat children?","acceptedAnswer":{"@type":"Answer","text":"Yes. We see patients from toddlers to seniors, and Dr. Bano focuses on gentle, kid-friendly care."}},{"@type":"Question","name":"What happens at my first visit?","acceptedAnswer":{"@type":"Answer","text":"A full exam, X-rays if needed, a professional cleaning and an oral cancer screening. We’ll review your history and talk through any concerns."}},{"@type":"Question","name":"What technology do you use?","acceptedAnswer":{"@type":"Answer","text":"Digital X-rays, intraoral cameras and same-day crown technology, plus Invisalign clear aligners."}},{"@type":"Question","name":"How often should I come in?","acceptedAnswer":{"@type":"Answer","text":"Every six months for most people. Patients with gum disease or other conditions may need more frequent cleanings."}},{"@type":"Question","name":"Where do I park?","acceptedAnswer":{"@type":"Answer","text":"The Ingleside Mall has its own lot. Our office is Suite 307, at 1208B VFW Parkway, near West Roxbury Crossings."}}]}]}</script>
 </head>
 <body>
@@ -39,11 +39,14 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="hero" id="top">
   <div class="wrap top">
-    <nav aria-label="Primary">
-      <a href="#services">Services</a><a href="#dentists">Dentists</a><a href="#visit">First visit</a><a href="#faq">FAQ</a>
-    </nav>
-    <a class="mark" href="#top" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg><span translate="no">Afia Dental</span></a>
-    <a class="tel" href="tel:+16173254100">(617) 325-4100</a>
+    <nav aria-label="Primary"><a href="/#services">Services</a><a href="/our-dentists/">Dentists</a><a href="/dental-emergencies/">Emergencies</a><a href="/contact/">Contact</a></nav>
+    <a class="mark" href="/" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg><span translate="no">Afia Dental</span></a>
+    <div class="top-r"><a class="tel" href="tel:+16173254100"><span class="tel-full">(617) 325-4100</span><span class="tel-short">Call<span class="sr"> (617) 325-4100</span></span></a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav">Menu</button></div>
+  </div>
+  <div class="mnav" id="mnav" hidden>
+    <nav aria-label="Menu"><a href="/#services">Services</a><a href="/our-dentists/">Our dentists</a><a href="/dental-emergencies/">Emergency dentist</a><a href="/contact/">Contact &amp; directions</a><a href="/#faq">FAQ</a></nav>
+    <a class="btn" href="/#book" data-book>Request an appointment</a>
+    <a class="btn ghost" href="tel:+16173254100">Call (617) 325-4100</a>
   </div>
 
   <div class="wrap hero-head">
@@ -102,7 +105,7 @@
   <section class="wrap team" id="dentists">
     <div class="team-head" data-rise>
       <h2>Meet our dentists</h2>
-      <p>Four dentists who share one approach: listen first, explain clearly, and keep you comfortable.</p>
+      <p>Four dentists who share one approach: listen first, explain clearly, and keep you comfortable. <a href="/our-dentists/">Read full bios</a>.</p>
     </div>
     <ul class="index" id="index">
       <li><button class="on" data-i="0"><span class="who">Dr. Raza Baig, DMD</span><span class="focus">Restorative and cosmetic dentistry</span><span class="inl"><img src="/img/dr-baig.webp" alt="" width="640" height="581" loading="lazy"></span></button></li>
@@ -194,7 +197,7 @@
     </div>
     <div class="foot-cols">
       <div><b>Services</b><a href="/dental-check-ups/">Check-ups &amp; cleanings</a><a href="/dental-implants/">Dental implants</a><a href="/dental-crowns-and-bridges/">Crowns &amp; bridges</a><a href="/invisalign/">Invisalign</a><a href="/cosmetic-dentistry/">Cosmetic dentistry</a><a href="/pediatric-dentistry/">Pediatric dentistry</a><a href="/dental-emergencies/">Emergency dentist</a></div>
-      <div><b>Practice</b><a href="/#dentists">Our dentists</a><a href="/#visit">Your first visit</a><a href="/#faq">Insurance</a><a href="/#book" data-book>Book a visit</a></div>
+      <div><b>Practice</b><a href="/our-dentists/">Our dentists</a><a href="/contact/">Contact &amp; directions</a><a href="/#visit">Your first visit</a><a href="/#faq">Insurance</a><a href="/#book" data-book>Book a visit</a></div>
       <div id="foot-hours"><b>Hours</b><span data-d="1">Mon–Fri 9 am – 5 pm</span><span data-d="6">Saturday 9 am – 3 pm</span><span data-d="0">Sunday closed</span></div>
       <div><b>Visit</b><a href="https://maps.app.goo.gl/dJfXv5TkRu6kLrTt7" target="_blank" rel="noopener">1208B VFW Parkway, Suite 307<br>West Roxbury, MA 02132</a><a href="tel:+16173254100">(617) 325-4100</a></div>
     </div>

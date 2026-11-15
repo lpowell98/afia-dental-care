@@ -1,8 +1,12 @@
 # Old Parkway Dental (WordPress) paths that no longer exist -> new site
 /appointment/            /#book       301
 /appointment             /#book       301
-/doctor/                 /#dentists   301
-/doctor                  /#dentists   301
+/doctor/                 /our-dentists/ 301
+/doctor                  /our-dentists/ 301
+/contact-us/             /contact/    301
+/contact-us              /contact/    301
+/our-dentists            /our-dentists/ 301
+/contact                 /contact/    301
 /services/               /#services   301
 /services                /#services   301
 /teeth-whitening/        /cosmetic-dentistry/     301

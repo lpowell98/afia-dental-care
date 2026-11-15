@@ -30,6 +30,10 @@ PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
      "The Afia Dental website offers general dental information, not a diagnosis. Call (617) 325-4100 for urgent problems or 911 for emergencies.", True),
     ("accessibility", "Accessibility | Afia Dental",
      "Afia Dental aims to meet WCAG 2.1 AA on afiadentalcare.com. Call (617) 325-4100 for help booking or to report an accessibility problem.", True),
+    ("contact", "Contact & Directions | Afia Dental, West Roxbury MA",
+     "Call (617) 325-4100, book online or visit Afia Dental at 1208B VFW Parkway, Suite 307 in the Ingleside Mall, West Roxbury. Hours, parking and directions.", True),
+    ("our-dentists", "Our Dentists in West Roxbury, MA | Afia Dental",
+     "Meet Dr. Raza Baig, DMD, Dr. Eriselda Bano, Dr. Suky Sidhu and Dr. Natalie Sokoloff, DDS: training, focus areas and how they care for West Roxbury patients.", True),
     ("404", "Page Not Found | Afia Dental",
      "This page doesn't exist. Visit the Afia Dental homepage, book online or call (617) 325-4100.", False),
 ]
@@ -86,7 +90,14 @@ def graph(slug, title, body):
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{URL}/"},
             {"@type": "ListItem", "position": 2, "name": "Services", "item": f"{URL}/#services"},
             {"@type": "ListItem", "position": 3, "name": sv["name"], "item": page_url(slug)}]})
-    elif slug != "404":
+    if slug == "our-dentists":
+        g += [{"@type": "Person", "@id": f"{page_url(slug)}#{d['id']}", "name": d["name"], "jobTitle": d["focus"],
+               "image": f"{URL}/img/{d['id']}.webp", "url": f"{page_url(slug)}#{d['id']}",
+               "worksFor": {"@id": f"{URL}/#business"}, **({"alumniOf": [{"@type": "CollegeOrUniversity", "name": n} for n in d["alumniOf"]]} if d.get("alumniOf") else {})}
+              for d in S["dentists"]]
+    if slug == "contact":
+        g.append({"@type": "ContactPage", "@id": page_url(slug), "url": page_url(slug), "name": title.split(" | ")[0], "about": {"@id": f"{URL}/#business"}})
+    if slug not in ("", "404") and slug not in SVC:
         g.append({"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{URL}/"},
             {"@type": "ListItem", "position": 2, "name": title.split(" | ")[0], "item": page_url(slug)}]})
@@ -130,11 +141,9 @@ HEAD = """<!doctype html>
 
 HEADER = """<a class="skip" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="tooth" viewBox="0 0 22 24"><path d="M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z" fill="currentColor"/></symbol></svg>
-<header class="bar" id="top"><div class="wrap top">
-<nav aria-label="Primary"><a href="/#services">Services</a><a href="/#dentists">Dentists</a><a href="/dental-emergencies/">Emergencies</a><a href="/#faq">FAQ</a></nav>
-<a class="mark" href="/" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg><span translate="no">Afia Dental</span></a>
-<a class="tel" href="tel:+16173254100">(617) 325-4100</a>
-</div></header>
+<header class="bar" id="top">
+  {{TOPBAR}}
+</header>
 """
 
 BAR = HEADER + """<main id="main" class="wrap doc">
@@ -212,6 +221,7 @@ def build():
     import hashlib
     ver = hashlib.md5((OUT / "css/site.css").read_bytes() + (OUT / "js/site.js").read_bytes()).hexdigest()[:8]
     footer = (SRC / "partials/footer.html").read_text()
+    topbar = (SRC / "partials/topbar.html").read_text().strip()
     email_sentence = f", email <a href=\"mailto:{S['email']}\">{S['email']}</a>," if S.get("email") else ","
     allp = [(s_, t, d, i, None) for s_, t, d, i in PAGES] + [(x["slug"], x["title"], x["desc"], True, service_body(x)) for x in SERVICES]
     for slug, title, desc, index, sbody in allp:
@@ -221,9 +231,12 @@ def build():
         else:
             body = (SRC / f"pages/{slug or 'index'}.html").read_text()
             if slug:
-                body = BAR.format(body=body) + "\n{{FOOTER}}\n"
-        body = body.replace("{{FOOTER}}", footer)
-        body = body.replace("{{UPDATED}}", UPDATED).replace("{{EMAIL_SENTENCE}}", email_sentence)
+                if body.startswith("<!--wide-->"):
+                    body = BAR.replace('<main id="main" class="wrap doc">', '<main id="main" class="wrap page">').replace("{body}", body[len("<!--wide-->"):].lstrip()) + "\n{{FOOTER}}\n"
+                else:
+                    body = BAR.replace("{body}", body) + "\n{{FOOTER}}\n"
+        body = body.replace("{{FOOTER}}", footer).replace("{{TOPBAR}}", topbar)
+        body = body.replace("{{UPDATED}}", UPDATED).replace("{{EMAIL_SENTENCE}}", email_sentence).replace("{{EMAIL}}", S.get("email", ""))
         head = HEAD.format(title=html.escape(title), desc=html.escape(desc), canon=page_url(slug),
                            robots='<meta name="robots" content="noindex">\n' if not index else "",
                            theme=S["themeColor"], name=S["name"], url=URL, og=slug or "home",

@@ -17,8 +17,13 @@
       var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
       var g=function(t){return (p.find(function(x){return x.type===t})||{}).value};
       var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),h=+g('hour')%24,m=+g('minute'),t=h+m/60;
-      var now=document.getElementById('now');if(!now){return}var _n,next=document.getElementById('next'),dot=document.getElementById('dot');
-      var today=H[d];
+      var key=d===0?'0':d===6?'6':'1';
+      document.querySelectorAll('#hours [data-d],#foot-hours [data-d]').forEach(function(e){e.classList.toggle('today',e.getAttribute('data-d')===key)});
+      document.querySelectorAll('[data-day]').forEach(function(e){var on=e.getAttribute('data-day')===String(d);e.classList.toggle('today',on);if(on)e.setAttribute('aria-current','date');else e.removeAttribute('aria-current')});
+      var now=document.getElementById('now'),next=document.getElementById('next'),dot=document.getElementById('dot');
+      var today=H[d],st=document.getElementById('open-status');
+      if(st){st.textContent=(today&&t>=today[0]&&t<today[1])?'Open now, until '+fmt(today[1])+' today':'Closed now'}
+      if(!now)return;
       if(today&&t>=today[0]&&t<today[1]){
         var left=today[1]-t;
         now.textContent='Open now';dot.classList.add('open');
@@ -31,8 +36,6 @@
         now.textContent='Closed now';
         next.textContent='Opens '+(k===0?'today':k===1?'tomorrow':names[dd])+' at '+fmt(start)+'.';
       }
-      var key=d===0?'0':d===6?'6':'1';
-      document.querySelectorAll('#hours [data-d],#foot-hours [data-d]').forEach(function(e){e.classList.toggle('today',e.getAttribute('data-d')===key)});
     }catch(e){}
   }
   tick();setInterval(tick,60000);
@@ -49,6 +52,16 @@
   /* first-visit accordion */
   var st=[].slice.call(document.querySelectorAll('.stage-p'));
   st.forEach(function(s,i){s.querySelector('button').addEventListener('click',function(){st.forEach(function(x,j){x.classList.toggle('open',j===i);x.querySelector('button').setAttribute('aria-expanded',j===i)})})});
+
+  /* phone menu */
+  var mb=document.querySelector('.menu-btn'),mn=document.getElementById('mnav');
+  if(mb&&mn){
+    function setMenu(open){mn.hidden=!open;mb.setAttribute('aria-expanded',open);mb.textContent=open?'Close':'Menu'}
+    mb.addEventListener('click',function(){setMenu(mn.hidden);if(!mn.hidden){var f=mn.querySelector('a');f&&f.focus()}});
+    mn.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mn.hidden){setMenu(false);mb.focus()}});
+    window.matchMedia('(min-width:721px)').addEventListener('change',function(m){if(m.matches)setMenu(false)});
+  }
 
   /* online booking: Simplifeye self-scheduler (HIPAA-compliant, hosted by Simplifeye).
      Loaded only when a visitor clicks a booking button: Simplifeye's script also loads
