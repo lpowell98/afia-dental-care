@@ -50,15 +50,21 @@
   var st=[].slice.call(document.querySelectorAll('.stage-p'));
   st.forEach(function(s,i){s.querySelector('button').addEventListener('click',function(){st.forEach(function(x,j){x.classList.toggle('open',j===i);x.querySelector('button').setAttribute('aria-expanded',j===i)})})});
 
-  /* online booking: Simplifeye self-scheduler (HIPAA-compliant, hosted by Simplifeye) */
-  window._SELF_SCHEDULING_WIDGET_CONF=window._SELF_SCHEDULING_WIDGET_CONF||{};
-  window._SELF_SCHEDULING_WIDGET_CONF.key='IrHKYGy15IWvHMTRuLTQFkmMl23qGrJ';
-  var sw=document.createElement('script');sw.async=true;sw.charset='UTF-8';sw.setAttribute('crossorigin','*');
-  sw.src='https://embed.simplifeye.co/self-scheduler/IrHKYGy15IWvHMTRuLTQFkmMl23qGrJ/embed';
-  document.head.appendChild(sw);
+  /* online booking: Simplifeye self-scheduler (HIPAA-compliant, hosted by Simplifeye).
+     Loaded only when a visitor clicks a booking button: Simplifeye's script also loads
+     the practice's Google Analytics, so visitors who only browse get no cookies. */
+  var SF_KEY='IrHKYGy15IWvHMTRuLTQFkmMl23qGrJ',sfLoading=false,sfPending=false;
   function schedulerReady(){return !!document.querySelector('iframe[id^="self-scheduling-widget-iframe"]')}
   function openScheduler(){
     window.postMessage(JSON.stringify({source:'simplifeye',type:'open-self-scheduling-widget',target:'selfSchedulingWidget',startingUrl:location.href}),'*');
+  }
+  function loadScheduler(){
+    if(sfLoading)return;sfLoading=true;
+    window._SELF_SCHEDULING_WIDGET_CONF=window._SELF_SCHEDULING_WIDGET_CONF||{};
+    window._SELF_SCHEDULING_WIDGET_CONF.key=SF_KEY;
+    var sw=document.createElement('script');sw.async=true;sw.charset='UTF-8';sw.setAttribute('crossorigin','*');
+    sw.src='https://embed.simplifeye.co/self-scheduler/'+SF_KEY+'/embed';
+    document.head.appendChild(sw);
   }
   /* give the scheduler's frames accessible names once they appear */
   new MutationObserver(function(){
@@ -69,7 +75,17 @@
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('[data-book]');
     if(!a)return;
-    if(schedulerReady()){e.preventDefault();openScheduler()}
-    /* otherwise the link falls through to #book, which offers the phone number */
+    e.preventDefault();
+    if(schedulerReady()){openScheduler();return}
+    if(sfPending)return;sfPending=true;
+    document.documentElement.style.cursor='progress';
+    loadScheduler();
+    var t0=Date.now();
+    (function wait(){
+      if(schedulerReady()){setTimeout(function(){openScheduler();done()},400);return}
+      if(Date.now()-t0>8000){done();location.href=a.getAttribute('href')||'tel:+16173254100';return}
+      setTimeout(wait,150);
+    })();
+    function done(){sfPending=false;document.documentElement.style.cursor=''}
   });
 })();
