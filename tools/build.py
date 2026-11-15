@@ -17,18 +17,18 @@ UPDATED = "November 14, 2026"
 URL = S["url"]
 
 PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
-    ("", "Dentist in West Roxbury, MA | Afia Dental Care",
+    ("", "Dentist in West Roxbury, MA | Afia Dental",
      "Family and cosmetic dentistry in West Roxbury for over 40 years. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
-    ("privacy", "Privacy Policy | Afia Dental Care",
-     "How the Afia Dental Care website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.", True),
-    ("terms", "Terms of Use | Afia Dental Care",
+    ("privacy", "Privacy Policy | Afia Dental",
+     "How the Afia Dental website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.", True),
+    ("terms", "Terms of Use | Afia Dental",
      "Terms for using afiadentalcare.com, including site information, online booking through Simplifeye, links to other sites and Massachusetts governing law.", True),
-    ("disclaimer", "Disclaimer | Afia Dental Care",
-     "The Afia Dental Care website offers general dental information, not a diagnosis. Call (617) 325-4100 for urgent problems or 911 for emergencies.", True),
-    ("accessibility", "Accessibility | Afia Dental Care",
-     "Afia Dental Care aims to meet WCAG 2.1 AA on afiadentalcare.com. Call (617) 325-4100 for help booking or to report an accessibility problem.", True),
-    ("404", "Page Not Found | Afia Dental Care",
-     "This page doesn't exist. Visit the Afia Dental Care homepage, book online or call (617) 325-4100.", False),
+    ("disclaimer", "Disclaimer | Afia Dental",
+     "The Afia Dental website offers general dental information, not a diagnosis. Call (617) 325-4100 for urgent problems or 911 for emergencies.", True),
+    ("accessibility", "Accessibility | Afia Dental",
+     "Afia Dental aims to meet WCAG 2.1 AA on afiadentalcare.com. Call (617) 325-4100 for help booking or to report an accessibility problem.", True),
+    ("404", "Page Not Found | Afia Dental",
+     "This page doesn't exist. Visit the Afia Dental homepage, book online or call (617) 325-4100.", False),
 ]
 
 
@@ -116,7 +116,7 @@ HEAD = """<!doctype html>
 BAR = """<a class="skip" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="tooth" viewBox="0 0 22 24"><path d="M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z" fill="currentColor"/></symbol></svg>
 <header class="bar" id="top"><div class="wrap top">
-<a class="mark" href="/" aria-label="Afia Dental Care home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg>Afia Dental Care</a>
+<a class="mark" href="/" aria-label="Afia Dental home"><svg style="color:var(--gold)" aria-hidden="true"><use href="#tooth"/></svg>Afia Dental</a>
 <a class="tel" href="tel:+16173254100">(617) 325-4100</a>
 </div></header>
 <main id="main" class="wrap doc">

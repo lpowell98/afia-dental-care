@@ -1,6 +1,6 @@
 @font-face{font-family:"Bricolage Grotesque";font-style:normal;font-display:swap;font-weight:200 800;src:url(/fonts/bricolage-grotesque.woff2) format("woff2-variations"),url(/fonts/bricolage-grotesque.woff2) format("woff2")}
 [hidden]:not([hidden=until-found i]){display:none!important}
-/* Afia Dental Care — site styles.
+/* Afia Dental — site styles.
    One motif: the gold smile curve under the name. It crops every photo, rounds the bottom of every button, divides the page and closes it. */
 :root{
   /* brand fields — constant in both themes */

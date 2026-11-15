@@ -1,4 +1,4 @@
-# Afia Dental Care
+# Afia Dental
 
 > Family and cosmetic dentistry in West Roxbury, MA, for over 40 years. Cleanings, same-day crowns, implants, Invisalign, pediatric care and same-day emergencies.
 
@@ -12,7 +12,7 @@
 ## Pages
 
 - [Dentist in West Roxbury, MA](https://afiadentalcare.com/): Family and cosmetic dentistry in West Roxbury for over 40 years. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.
-- [Privacy Policy](https://afiadentalcare.com/privacy/): How the Afia Dental Care website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.
+- [Privacy Policy](https://afiadentalcare.com/privacy/): How the Afia Dental website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.
 - [Terms of Use](https://afiadentalcare.com/terms/): Terms for using afiadentalcare.com, including site information, online booking through Simplifeye, links to other sites and Massachusetts governing law.
-- [Disclaimer](https://afiadentalcare.com/disclaimer/): The Afia Dental Care website offers general dental information, not a diagnosis. Call (617) 325-4100 for urgent problems or 911 for emergencies.
-- [Accessibility](https://afiadentalcare.com/accessibility/): Afia Dental Care aims to meet WCAG 2.1 AA on afiadentalcare.com. Call (617) 325-4100 for help booking or to report an accessibility problem.
+- [Disclaimer](https://afiadentalcare.com/disclaimer/): The Afia Dental website offers general dental information, not a diagnosis. Call (617) 325-4100 for urgent problems or 911 for emergencies.
+- [Accessibility](https://afiadentalcare.com/accessibility/): Afia Dental aims to meet WCAG 2.1 AA on afiadentalcare.com. Call (617) 325-4100 for help booking or to report an accessibility problem.

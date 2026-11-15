@@ -1,8 +1,8 @@
 # BRAND.md
 
 ## Business
-- Public name (use exactly this everywhere): Afia Dental Care
-- Legal entity (copyright, Terms, Privacy): Afia Dental Care [confirm legal entity name]
+- Public name (use exactly this everywhere): Afia Dental
+- Legal entity (copyright, Terms, Privacy): Afia Dental [confirm legal entity name]
 - Business type (schemaType): Dentist
 - One-line description: Family and cosmetic dentistry in West Roxbury, MA, for over 40 years.
 - Formerly: Parkway Dental (parkwaydental.site). Same office, same team.
@@ -26,7 +26,7 @@
 
 ## Profiles (name and phone must match the site)
 - Website: https://afiadentalcare.com
-- Google Business Profile: https://maps.google.com/?cid=10034673862898343424 (rename to Afia Dental Care)
+- Google Business Profile: https://maps.google.com/?cid=10034673862898343424 (rename to Afia Dental)
 - Map: https://maps.app.goo.gl/dJfXv5TkRu6kLrTt7
 
 ## Do not claim

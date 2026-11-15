@@ -1,6 +1,6 @@
 # afiadentalcare.com
 
-Static site for Afia Dental Care (West Roxbury, MA). Plain HTML/CSS/JS on Cloudflare Pages.
+Static site for Afia Dental (West Roxbury, MA). Plain HTML/CSS/JS on Cloudflare Pages.
 
 | Path | What it is |
 |---|---|

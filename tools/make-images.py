@@ -7,10 +7,10 @@ ROOT = Path(__file__).resolve().parent.parent; OUT = ROOT / "site"
 TOOTH = 'M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z'
 FAV = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#1E3A35"/><g transform="translate(5 4)"><path d="{TOOTH}" fill="#D6A653"/></g></svg>'
 (OUT / "favicon.svg").write_text(FAV + "\n")
-PAGES = {"home": ("Dentist in West Roxbury, MA", "Afia Dental Care"),
-         "privacy": ("Afia Dental Care", "Privacy Policy"), "terms": ("Afia Dental Care", "Terms of Use"),
-         "disclaimer": ("Afia Dental Care", "Disclaimer"), "accessibility": ("Afia Dental Care", "Accessibility"),
-         "404": ("Afia Dental Care", "Page not found")}
+PAGES = {"home": ("Dentist in West Roxbury, MA", "Afia Dental"),
+         "privacy": ("Afia Dental", "Privacy Policy"), "terms": ("Afia Dental", "Terms of Use"),
+         "disclaimer": ("Afia Dental", "Disclaimer"), "accessibility": ("Afia Dental", "Accessibility"),
+         "404": ("Afia Dental", "Page not found")}
 import base64
 FONT = "data:font/woff2;base64," + base64.b64encode((OUT / "fonts/bricolage-grotesque.woff2").read_bytes()).decode()
 def og(kick, title):
