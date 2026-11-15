@@ -1,0 +1,21 @@
+# Old Parkway Dental (WordPress) paths -> new site, for links and bookmarks
+/appointment/            /#book       301
+/appointment             /#book       301
+/doctor/                 /#dentists   301
+/doctor                  /#dentists   301
+/services/               /#services   301
+/services                /#services   301
+/cosmetic-dentistry/     /#services   301
+/dental-crowns-and-bridges/ /#services 301
+/dental-implants/        /#services   301
+/invisalign/             /#services   301
+/tooth-extraction/       /#services   301
+/preventative-dentistry/ /#services   301
+/restorative-dentistry/  /#services   301
+/dental-check-ups/       /#services   301
+/pediatric-dentistry/    /#services   301
+/dental-emergencies/     /#services   301
+/privacy                 /privacy/    301
+/terms                   /terms/      301
+/disclaimer              /disclaimer/ 301
+/accessibility           /accessibility/ 301

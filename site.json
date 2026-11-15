@@ -1,0 +1,34 @@
+{
+  "name": "Afia Dental Care",
+  "legalName": "Afia Dental Care",
+  "url": "https://afiadentalcare.com",
+  "schemaType": "Dentist",
+  "description": "Family and cosmetic dentistry in West Roxbury, MA, for over 40 years. Cleanings, same-day crowns, implants, Invisalign, pediatric care and same-day emergencies.",
+  "telephone": "+1-617-325-4100",
+  "phoneDisplay": "(617) 325-4100",
+  "email": "",
+  "address": {
+    "streetAddress": "1208B VFW Parkway, Suite 307",
+    "addressLocality": "West Roxbury",
+    "addressRegion": "MA",
+    "postalCode": "02132",
+    "addressCountry": "US"
+  },
+  "hours": [
+    {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00"},
+    {"days": ["Saturday"], "opens": "09:00", "closes": "15:00"}
+  ],
+  "areaServed": ["West Roxbury, MA", "Boston, MA"],
+  "priceRange": "$$",
+  "hasMap": "https://maps.app.goo.gl/dJfXv5TkRu6kLrTt7",
+  "googleReviews": "https://maps.google.com/?cid=10034673862898343424",
+  "sameAs": ["https://maps.google.com/?cid=10034673862898343424"],
+  "rating": {"value": "4.7", "count": "99"},
+  "dentists": [
+    {"name": "Dr. Raza Baig, DMD", "focus": "Restorative and cosmetic dentistry"},
+    {"name": "Dr. Eriselda Bano", "focus": "Pediatric dentistry"},
+    {"name": "Dr. Suky Sidhu", "focus": "Smile makeovers, Invisalign and veneers"},
+    {"name": "Dr. Natalie Sokoloff, DDS", "focus": "General, restorative and preventive care"}
+  ],
+  "themeColor": "#1E3A35"
+}
