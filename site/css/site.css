@@ -55,7 +55,10 @@ p{margin:0}
 .top nav a,.top .tel{text-decoration:none;opacity:.88;transition:opacity .2s}
 .top nav a:hover,.top .tel:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
 .mark{display:flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:-.02em;text-decoration:none}
-.mark svg{width:22px;height:24px}
+.mark{gap:12px}
+.mark .mk-tooth{width:25px;height:26px;margin-bottom:2px}
+.mark .mk-word{width:153px;height:22px;flex:none}
+@media (max-width:420px){.mark{gap:9px}.mark .mk-tooth{width:20px;height:21px}.mark .mk-word{width:118px;height:17px}}
 .top .tel{justify-self:end;font-size:15px;font-variant-numeric:tabular-nums}
 .hero-head{text-align:center;padding-block:clamp(32px,4vw,56px) clamp(48px,5vw,72px)}
 .hero h1{font-size:var(--step-hero);line-height:.9;letter-spacing:-.05em}
