@@ -50,6 +50,12 @@
   },
   "dentists": [
     {
+      "name": "Dr. Alla Edriss, DMD",
+      "focus": "General and family dentistry",
+      "id": "dr-edriss",
+      "alumniOf": []
+    },
+    {
       "name": "Dr. Raza Baig, DMD",
       "focus": "Restorative and cosmetic dentistry",
       "id": "dr-baig",

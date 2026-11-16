@@ -33,7 +33,7 @@ PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
     ("contact", "Contact & Directions | Afia Dental, West Roxbury MA",
      "Call (617) 325-4100, book online or visit Afia Dental at 1208B VFW Parkway, Suite 307 in the Ingleside Mall, West Roxbury. Hours, parking and directions.", True),
     ("our-dentists", "Our Dentists in West Roxbury, MA | Afia Dental",
-     "Meet Dr. Raza Baig, DMD, Dr. Eriselda Bano, Dr. Suky Sidhu and Dr. Natalie Sokoloff, DDS: training, focus areas and how they care for West Roxbury patients.", True),
+     "Meet owner Dr. Alla Edriss, DMD, and our West Roxbury dentists: Dr. Raza Baig, Dr. Eriselda Bano, Dr. Suky Sidhu and Dr. Natalie Sokoloff.", True),
     ("404", "Page Not Found | Afia Dental",
      "This page doesn't exist. Visit the Afia Dental homepage, book online or call (617) 325-4100.", False),
 ]

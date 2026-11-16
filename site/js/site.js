@@ -41,7 +41,8 @@
   tick();setInterval(tick,60000);
 
   /* dentist index with preview */
-  var bios=['Known for precision and kindness, Dr. Baig helps patients regain confidence with crowns, root canals and cosmetic work.',
+  var bios=['Dr. Edriss, the owner and primary dentist, leads family care from check-ups and cleanings to fillings and crowns.',
+    'Known for precision and kindness, Dr. Baig helps patients regain confidence with crowns, root canals and cosmetic work.',
     'Dr. Bano brings warmth and patience to every child\'s visit, so first trips to the dentist build trust instead of fear.',
     'With over a decade in cosmetic dentistry, Dr. Sidhu focuses on natural-looking smile makeovers, veneers and Invisalign.',
     'Dr. Sokoloff focuses on gentle, preventive care and keeping every patient comfortable from cleaning to restoration.'];

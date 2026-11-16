@@ -14,6 +14,7 @@
 - Booking: Simplifeye self-scheduler (widget key IrHKYGy15IWvHMTRuLTQFkmMl23qGrJ). No booking forms on the site (HIPAA).
 
 ## Dentists (as shown on the site)
+- Dr. Alla Edriss, DMD — owner and primary dentist; general and family [school and credentials to confirm; photo is an AE monogram placeholder]
 - Dr. Raza Baig, DMD (Boston University) — restorative and cosmetic
 - Dr. Eriselda Bano — pediatric
 - Dr. Suky Sidhu — smile makeovers, Invisalign, veneers [confirm MA license and credentials]
