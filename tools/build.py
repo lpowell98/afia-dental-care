@@ -32,6 +32,8 @@ PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
      "Afia Dental aims to meet WCAG 2.1 AA on afiadentalcare.com. Call (617) 325-4100 for help booking or to report an accessibility problem.", True),
     ("contact", "Contact & Directions | Afia Dental, West Roxbury MA",
      "Call (617) 325-4100, book online or visit Afia Dental at 1208B VFW Parkway, Suite 307 in the Ingleside Mall, West Roxbury. Hours, parking and directions.", True),
+    ("new-patients", "New Patients | Afia Dental, West Roxbury MA",
+     "New to Afia Dental? Your $139 first visit includes an exam, cleaning and 4 digital X-rays. What to bring, insurance and payment options in West Roxbury.", True),
     ("our-dentists", "Our Dentists in West Roxbury, MA | Afia Dental",
      "Meet owner Dr. Alla Edriss, DMD, and our West Roxbury dentists: Dr. Raza Baig, Dr. Eriselda Bano, Dr. Suky Sidhu and Dr. Natalie Sokoloff.", True),
     ("404", "Page Not Found | Afia Dental",
@@ -95,6 +97,8 @@ def graph(slug, title, body):
                "image": f"{URL}/img/{d['id']}.webp", "url": f"{page_url(slug)}#{d['id']}",
                "worksFor": {"@id": f"{URL}/#business"}, **({"alumniOf": [{"@type": "CollegeOrUniversity", "name": n} for n in d["alumniOf"]]} if d.get("alumniOf") else {})}
               for d in S["dentists"]]
+    if slug == "new-patients":
+        g.append(faq(body, f"{page_url(slug)}#faq"))
     if slug == "contact":
         g.append({"@type": "ContactPage", "@id": page_url(slug), "url": page_url(slug), "name": title.split(" | ")[0], "about": {"@id": f"{URL}/#business"}})
     if slug not in ("", "404") and slug not in SVC:

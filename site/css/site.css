@@ -53,6 +53,7 @@ p{margin:0}
 .top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-block:22px}
 .top nav{display:flex;gap:24px;font-size:15px}
 .top nav a,.top .tel{text-decoration:none;opacity:.88;transition:opacity .2s}
+.top nav a{white-space:nowrap}
 .top nav a:hover,.top .tel:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
 .mark{display:flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:-.02em;text-decoration:none}
 .mark svg{width:22px;height:24px}
@@ -143,6 +144,7 @@ p{margin:0}
 .visit-intro{display:grid;grid-template-columns:repeat(12,1fr);gap:0 clamp(16px,2vw,28px);margin-bottom:28px;align-items:end}
 .visit-intro h2{grid-column:1/6;font-size:var(--step-head)}
 .visit-intro p{grid-column:7/12;font-size:18px}
+.visit-intro a{text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:4px}
 .stages{display:flex;flex-direction:column}
 .stage-p{position:relative;background:var(--sc);color:var(--si)}
 .stage-p:nth-child(1){--sc:var(--deep);--si:var(--on-deep)}
@@ -394,13 +396,19 @@ iframe[id^="self-scheduling-widget-button-iframe"]{display:none!important}
 .mnav nav a{padding:14px 0;font-size:20px;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(241,245,243,.12)}
 .mnav nav a:hover{color:var(--gold-soft)}
 .mnav .btn{width:100%;margin-top:10px}
+@media (max-width:1100px){
+  .top{grid-template-columns:1fr auto}
+  .top nav{display:none}
+  .mark{justify-self:start}
+  .menu-btn{display:inline-flex}
+}
 @media (max-width:720px){
   .tel-full{display:none}
   .tel-short{display:inline}
   .top .top-r .tel{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-size:16px;font-weight:500;opacity:1}
   .menu-btn{display:inline-flex}
 }
-@media (min-width:721px){.mnav{display:none!important}}
+@media (min-width:1101px){.mnav{display:none!important}}
 
 /* ───── wide inner pages (contact, dentists) ───── */
 .page{padding-block:clamp(48px,6vw,88px) var(--sec)}
@@ -441,6 +449,11 @@ iframe[id^="self-scheduling-widget-button-iframe"]{display:none!important}
 .doc-cred{margin-top:14px!important;font-size:16px}
 .pg-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(40px,5vw,64px);padding:clamp(24px,3vw,36px);background:var(--deep);color:var(--on-deep)}
 .pg-cta p{font-size:var(--step-lead);margin:0}
+.np-steps{padding-left:1.4em;margin:0}
+.np-steps li{padding-left:4px;margin-bottom:14px}
+.np-pay{max-width:62ch;margin-top:clamp(48px,6vw,80px);scroll-margin-top:16px}
+.np-faq{margin-top:clamp(48px,6vw,80px)}
+.np-faq .qs{max-width:860px}
 @media (max-width:900px){
   .contact-grid{grid-template-columns:1fr}
   .contact-two > :first-child,.contact-two > :last-child{grid-column:1/13}

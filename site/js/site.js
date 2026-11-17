@@ -61,7 +61,7 @@
     mb.addEventListener('click',function(){setMenu(mn.hidden);if(!mn.hidden){var f=mn.querySelector('a');f&&f.focus()}});
     mn.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mn.hidden){setMenu(false);mb.focus()}});
-    window.matchMedia('(min-width:721px)').addEventListener('change',function(m){if(m.matches)setMenu(false)});
+    window.matchMedia('(min-width:1101px)').addEventListener('change',function(m){if(m.matches)setMenu(false)});
   }
 
   /* online booking: Simplifeye self-scheduler (HIPAA-compliant, hosted by Simplifeye).
