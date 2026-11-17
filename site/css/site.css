@@ -504,3 +504,10 @@ html:not(.js) .map-box{display:none}
 .pg-band .updated{margin:0;opacity:.8;font-size:var(--step-small)}
 .pg-band .pg-lead{max-width:52ch}
 .pg-band .open-line{color:var(--gold)}
+.pg-band-in{display:grid;grid-template-columns:repeat(12,1fr);gap:32px clamp(16px,2vw,28px);align-items:center;padding-block:clamp(36px,4.5vw,64px) clamp(48px,5.5vw,88px)}
+.pg-band-in .pg-head{grid-column:1/8;padding-block:0}
+.pg-img{grid-column:9/13;aspect-ratio:1/1;width:100%;max-width:360px;justify-self:end}
+@media (max-width:900px){
+  .pg-band-in .pg-head{grid-column:1/13}
+  .pg-img{grid-column:1/13;justify-self:start;max-width:240px}
+}

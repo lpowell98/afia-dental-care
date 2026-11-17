@@ -45,6 +45,13 @@ PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
 ]
 
 
+# Photo on the right of the green band (smaller than the service-page hero photo)
+BAND_IMG = {
+    "new-patients": ("cleanings", "Smiling patient with her hygienist and dentist during a check-up"),
+    "our-dentists": ("family", "Two dental team members with a smiling young patient"),
+    "contact": ("invisalign", "Patient talking with her dentist in a bright treatment room"),
+}
+
 def page_url(slug):
     return f"{URL}/" if slug in ("", "404") else f"{URL}/{slug}/"
 
@@ -245,6 +252,12 @@ def build():
                 m = re.match(r'\s*(<div class="pg-head">.*?</div>)\s*', inner, re.S) if wide else \
                     re.match(r'\s*(<h1>.*?</h1>\s*(?:<p class="updated">.*?</p>)?)\s*', inner, re.S)
                 top = m.group(1) if wide else f'<div class="pg-head">{m.group(1)}</div>'
+                if slug in BAND_IMG:
+                    im, alt = BAND_IMG[slug]
+                    from PIL import Image
+                    iw, ih = Image.open(OUT / f"img/{im}.webp").size
+                    top = (f'<div class="pg-band-in">{top}<div class="pg-img smile-img"><img src="/img/{im}.webp" alt="{alt}" '
+                           f'width="{iw}" height="{ih}" fetchpriority="high"></div></div>')
                 body = (HEADER + f'<main id="main">\n<section class="pg-band"><div class="wrap">{top}</div></section>\n'
                         f'<div class="wrap {"page" if wide else "doc"}">\n{inner[m.end():]}</div></main>\n' + "\n{{FOOTER}}\n")
         body = body.replace("{{FOOTER}}", footer).replace("{{TOPBAR}}", topbar)
