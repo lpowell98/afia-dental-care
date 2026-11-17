@@ -133,7 +133,7 @@ p{margin:0}
 .index .who{font-size:clamp(1.4rem,2vw,1.875rem);font-weight:600;letter-spacing:-.03em;line-height:1.05}
 .index .focus{grid-column:1/2;font-size:16px;opacity:.82}
 .index .inl{display:none}
-.preview{grid-column:9/13;position:sticky;top:24px;align-self:start;width:min(100%,300px);justify-self:end}
+.preview{grid-column:9/13;position:sticky;top:24px;align-self:start;width:min(100%,220px);justify-self:end}
 .frame{position:relative;aspect-ratio:1/1;border-radius:var(--smile);overflow:hidden;background:var(--surface)}
 .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;opacity:0;transition:opacity .24s ease}
 .frame img.on{opacity:1}
@@ -525,3 +525,7 @@ html:not(.js) .map-box{display:none}
 .np-pay{margin-inline:auto;text-align:center}
 .np-pay .plans{display:flex;flex-wrap:wrap;justify-content:center}
 .np-pay .plans li{flex:0 1 150px}
+@media (min-width:721px){
+  .np-pay .plans{flex-wrap:nowrap}
+  .np-pay .plans li{flex:1 1 0;min-width:0;padding:12px 8px;font-size:16px}
+}
