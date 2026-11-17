@@ -456,9 +456,13 @@ iframe[id^="self-scheduling-widget-button-iframe"]{display:none!important}
 .hours-table tr.today th,.hours-table tr.today td{font-weight:600}
 .hours-table tr.today th{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:3px;text-underline-offset:5px}
 .c-note{margin-top:16px;color:var(--ink-soft);font-size:16px}
-.c-map{margin-top:clamp(48px,6vw,80px);scroll-margin-top:16px}
-html:not(.js) .c-map{display:none}
-.map-box{position:relative;aspect-ratio:16/7;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center;overflow:hidden}
+.c-map{scroll-margin-top:16px}
+html:not(.js) .map-box{display:none}
+.c-find{margin-top:20px!important}
+.c-card .c-address{font-size:18px;margin:4px 0 16px}
+.c-card .c-links{margin-top:auto;gap:8px}
+.c-card .c-links .btn{margin-top:0;padding-inline:18px}
+.map-box{position:relative;aspect-ratio:16/10;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center;overflow:hidden}
 .map-box p{max-width:46ch;color:var(--ink-soft);margin:0}
 .map-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .docs{display:flex;flex-direction:column;gap:12px}
