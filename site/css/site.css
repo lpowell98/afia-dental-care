@@ -465,6 +465,10 @@ html:not(.js) .c-map{display:none}
 .np-steps{padding-left:1.4em;margin:0}
 .np-steps li{padding-left:4px;margin-bottom:14px}
 .np-pay{max-width:62ch;margin-top:clamp(48px,6vw,80px);scroll-margin-top:16px}
+.plans{list-style:none;padding:0!important;margin:4px 0 0!important;display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:10px}
+.plans li{margin:0!important;min-height:72px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;background:var(--surface);font-weight:600;font-size:17px;letter-spacing:-.01em}
+.plans-note{margin-bottom:20px!important}
+.local-text a:not(.local-links a){text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:4px}
 .np-faq{margin-top:clamp(48px,6vw,80px)}
 .np-faq .qs{max-width:860px}
 @media (max-width:900px){
