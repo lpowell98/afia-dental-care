@@ -55,7 +55,7 @@ SERVICES = [
  "lead": "Invisalign® straightens teeth with a series of nearly invisible, removable trays instead of metal brackets and wires. It treats crowding, gaps and many bite problems, and fits into your daily routine.",
  "sections": [
   ("How Invisalign® works", """
-<p>Treatment starts with a consultation. Dr. Raza Baig, who is certified in Invisalign, checks your teeth and talks through your goals. We take digital scans (no messy impressions) and build a 3D plan that shows how your teeth will move, step by step.</p>
+<p>Treatment starts with a consultation. Your dentist checks your teeth and talks through your goals. We take digital scans (no messy impressions) and build a 3D plan that shows how your teeth will move, step by step.</p>
 <p>You wear each set of aligners <strong>20–22&nbsp;hours a day</strong>, taking them out only to eat, drink, brush and floss, and switch to a new set every one to two weeks. Most patients notice changes within a few weeks, and many finish in <strong>6 to 12&nbsp;months</strong>, depending on the case.</p>"""),
   ("How your trays are made", """
 <p>Your scans and treatment plan go to the Invisalign lab, where your aligners are custom-made from a smooth, flexible material called SmartTrack and trimmed to your gumline for comfort. When they arrive, we check the fit and show you how to wear and clean them. Most patients start within a few weeks.</p>"""),
@@ -102,7 +102,7 @@ SERVICES = [
   ("Benefits beyond looks", """
 <p>A smile you’re happy with makes it easier to laugh, talk and have your picture taken. Many cosmetic treatments help function too: bonding can reduce sensitivity, crowns strengthen weak teeth, and straighter teeth are easier to keep clean.</p>"""),
   ("Preparing for your consultation", """
-<p>Brush and floss as usual, and if you’re due for a cleaning, it’s best to do that first, since healthy teeth and gums are the right base for cosmetic work. Think about what you’d like to change. Some patients bring a photo of their younger smile; others just want to feel better in pictures. At your consultation, Dr. Raza Baig walks through the options, timelines and costs and answers your questions.</p>"""),
+<p>Brush and floss as usual, and if you’re due for a cleaning, it’s best to do that first, since healthy teeth and gums are the right base for cosmetic work. Think about what you’d like to change. Some patients bring a photo of their younger smile; others just want to feel better in pictures. At your consultation, your dentist walks through the options, timelines and costs and answers your questions.</p>"""),
  ],
  "faqs": [
   ("How long do cosmetic treatments take?", "Whitening can be done in one visit. Veneers take a few weeks, and Invisalign® takes months. We’ll tell you the timeline for your plan at your consultation."),
@@ -192,7 +192,7 @@ SERVICES = [
   ("Why prevention matters", """
 <p>Small problems are easier, cheaper and more comfortable to fix when we catch them early. Your mouth is also connected to your overall health: gum disease has been linked to heart disease and makes conditions like diabetes harder to manage. Regular care protects both.</p>"""),
   ("How often to visit", """
-<p>Most people do well with a visit every six months. If you get cavities often or have a history of gum disease, you may need to come more often; if your teeth and gums are very healthy, less. Dr. Natalie Sokoloff and our team review your history and recommend the schedule that fits you.</p>"""),
+<p>Most people do well with a visit every six months. If you get cavities often or have a history of gum disease, you may need to come more often; if your teeth and gums are very healthy, less. Your dentist and our team review your history and recommend the schedule that fits you.</p>"""),
   ("What happens at a cleaning", """
 <p>We check your teeth and gums for early signs of decay, inflammation or other problems, taking X-rays when needed. Then we remove plaque and tartar, polish your teeth, floss and rinse. For gum disease, we may recommend a deep cleaning below the gumline, done with numbing for comfort.</p>"""),
   ("Fluoride and sealants", """
@@ -251,7 +251,7 @@ SERVICES = [
   ("Benefits of restorative dentistry", """
 <p>Restorations do more than fix damage. They protect neighboring teeth, help prevent gum problems and lower the risk of bone loss. A <a href="/dental-crowns-and-bridges/">crown</a> keeps a weak tooth from breaking; an <a href="/dental-implants/">implant</a> keeps the jawbone strong and stops teeth from drifting. Treating problems early means fewer complications and more comfortable chewing.</p>"""),
   ("Direct and indirect restorations", """
-<p><strong>Direct restorations</strong> are done in one visit, right in the mouth, like tooth-colored fillings. <strong>Indirect restorations</strong> are made to fit outside the mouth, like inlays, onlays, veneers and crowns, and are best for larger damage. Bridges, implants and dentures replace missing teeth. Dr. Raza Baig will recommend what fits your tooth and your budget.</p>"""),
+<p><strong>Direct restorations</strong> are done in one visit, right in the mouth, like tooth-colored fillings. <strong>Indirect restorations</strong> are made to fit outside the mouth, like inlays, onlays, veneers and crowns, and are best for larger damage. Bridges, implants and dentures replace missing teeth. Your dentist will recommend what fits your tooth and your budget.</p>"""),
   ("Care for every age", """
 <ul>
 <li><strong>Children and teens:</strong> repairs that protect developing teeth and allow for growth.</li>
@@ -334,9 +334,7 @@ SERVICES = [
  ],
  "faqs": [
   ("Do you offer same-day emergency care?", "Yes. We set aside time every day for emergencies. Call (617) 325-4100 and we’ll do our best to see you today."),
-  ("Do you take walk-ins for emergencies?", "Walk-ins are welcome during office hours. Calling first helps us prepare and shortens your wait."),
   ("How much is an emergency visit?", "The emergency exam is $59. Treatment costs depend on the problem, and you’ll get a clear estimate before we begin."),
-  ("Do you accept insurance for emergencies?", "We work with most plans and help you use your benefits. Payment options are available."),
   ("What should I do if a tooth gets knocked out?", "Hold it by the crown, not the root, rinse it gently and keep it in milk or saliva. Call (617) 325-4100 and come in right away. Don’t put a child’s baby tooth back in; call us for instructions."),
   ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5 and Saturday 9–3. Outside those hours, call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
  ],

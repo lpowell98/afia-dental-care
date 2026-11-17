@@ -60,16 +60,6 @@
       "alumniOf": []
     },
     {
-      "name": "Dr. Raza Baig, DMD",
-      "focus": "Restorative and cosmetic dentistry",
-      "id": "dr-baig",
-      "alumniOf": [
-        "Boston University Henry M. Goldman School of Dental Medicine",
-        "University of Connecticut School of Dental Medicine",
-        "Riphah International University"
-      ]
-    },
-    {
       "name": "Dr. Eriselda Bano",
       "focus": "Pediatric dentistry",
       "id": "dr-bano",
@@ -77,20 +67,6 @@
         "Boston University School of Dental Medicine",
         "Tufts University School of Dental Medicine",
         "University of Tirana"
-      ]
-    },
-    {
-      "name": "Dr. Suky Sidhu",
-      "focus": "Smile makeovers, Invisalign and veneers",
-      "id": "dr-sidhu",
-      "alumniOf": []
-    },
-    {
-      "name": "Dr. Natalie Sokoloff, DDS",
-      "focus": "General, restorative and preventive care",
-      "id": "dr-sokoloff",
-      "alumniOf": [
-        "New York University College of Dentistry"
       ]
     }
   ],

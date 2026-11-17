@@ -522,3 +522,6 @@ html:not(.js) .map-box{display:none}
   .svc-lead{line-height:1.35}
   .svc-hero .crumbs,.pg-band .crumbs{margin-bottom:16px}
 }
+.np-pay{margin-inline:auto;text-align:center}
+.np-pay .plans{display:flex;flex-wrap:wrap;justify-content:center}
+.np-pay .plans li{flex:0 1 150px}

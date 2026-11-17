@@ -42,10 +42,7 @@
 
   /* dentist index with preview */
   var bios=['Dr. Edriss, the owner and primary dentist, leads family care from check-ups and cleanings to fillings and crowns.',
-    'Known for precision and kindness, Dr. Baig helps patients regain confidence with crowns, root canals and cosmetic work.',
-    'Dr. Bano brings warmth and patience to every child\'s visit, so first trips to the dentist build trust instead of fear.',
-    'With over a decade in cosmetic dentistry, Dr. Sidhu focuses on natural-looking smile makeovers, veneers and Invisalign.',
-    'Dr. Sokoloff focuses on gentle, preventive care and keeping every patient comfortable from cleaning to restoration.'];
+    'Dr. Bano brings warmth and patience to every child\'s visit, so first trips to the dentist build trust instead of fear.'];
   var btns=[].slice.call(document.querySelectorAll('#index button')),imgs=[].slice.call(document.querySelectorAll('.frame img')),bio=document.getElementById('bio');
   function pick(i){btns.forEach(function(b,j){b.classList.toggle('on',j===i)});imgs.forEach(function(m,j){m.classList.toggle('on',j===i)});bio.textContent=bios[i]}
   btns.forEach(function(b,i){b.addEventListener('mouseenter',function(){pick(i)});b.addEventListener('focus',function(){pick(i)});b.addEventListener('click',function(){pick(i)})});
