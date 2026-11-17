@@ -225,9 +225,10 @@ p{margin:0}
 
 /* ───── FOOTER ───── */
 footer{background:var(--deep);color:var(--on-deep);padding-block:clamp(48px,5vw,72px) 0}
-.foot-cta{display:flex;flex-direction:column;gap:16px}
+.foot-cta{display:flex;flex-direction:column;gap:16px;scroll-margin-top:24px}
 .foot-cta .line{display:flex;align-items:center;gap:16px 32px;flex-wrap:wrap}
-.foot-cta .line span{margin-left:auto}
+.foot-cta .act{display:flex;align-items:center;gap:16px 32px;flex-wrap:wrap;margin-left:auto}
+.foot-cta span a{color:inherit;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:5px}
 .foot-cta p{font-size:var(--step-head);font-weight:600;letter-spacing:-.04em;line-height:1}
 .foot-cta span{font-size:var(--step-lead);opacity:.9;font-variant-numeric:tabular-nums}
 .foot-cta .btn{min-height:60px;padding-inline:36px;font-size:var(--step-lead)}
@@ -318,7 +319,7 @@ footer{background:var(--deep);color:var(--on-deep);padding-block:clamp(48px,5vw,
   .coupon-l{border-right:0;border-bottom:5px dotted var(--ground);padding:32px 24px 40px}
   .coupon form{padding:40px 24px 32px}
   .coupon input,.coupon select{height:54px}
-  .foot-cta .line span{margin-left:0}
+  .foot-cta .act{margin-left:0;width:100%}
   .foot-cta .btn{width:100%}
   .foot-cols{grid-template-columns:1fr 1fr}
 }
