@@ -6,7 +6,7 @@
 - Business type (schemaType): Dentist
 - One-line description: Family and cosmetic dentistry in West Roxbury, MA, for over 40 years.
 - Formerly: Parkway Dental (parkwaydental.site). Same office, same team.
-- Service area: West Roxbury and Boston, MA
+- Service area: West Roxbury and Boston, MA; nearby areas named on the site (Lans confirmed Nov 16, 2026): Roslindale, Dedham, Needham, Hyde Park
 - Phone (one number, same everywhere): (617) 325-4100
 - Email: info@afiadentalcare.com
 - Address: 1208B VFW Parkway, Suite 307 (Ingleside Mall), West Roxbury, MA 02132

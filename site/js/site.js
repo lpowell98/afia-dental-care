@@ -64,6 +64,16 @@
     window.matchMedia('(min-width:1101px)').addEventListener('change',function(m){if(m.matches)setMenu(false)});
   }
 
+  /* contact map: Google Maps loads only when the visitor taps "Show map" (no Google cookies before that) */
+  var mapBtn=document.querySelector('[data-map]');
+  if(mapBtn){mapBtn.addEventListener('click',function(){
+    var box=document.getElementById('map-box'),f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q=1208B+VFW+Parkway,+Suite+307,+West+Roxbury,+MA+02132&output=embed';
+    f.title='Map showing Afia Dental at 1208B VFW Parkway, West Roxbury';
+    f.referrerPolicy='no-referrer-when-downgrade';f.setAttribute('allowfullscreen','');
+    box.textContent='';box.appendChild(f);f.focus();
+  })}
+
   /* online booking: Simplifeye self-scheduler (HIPAA-compliant, hosted by Simplifeye).
      Loaded only when a visitor clicks a booking button: Simplifeye's script also loads
      the practice's Google Analytics, so visitors who only browse get no cookies. */

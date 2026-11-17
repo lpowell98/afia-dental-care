@@ -15,8 +15,8 @@ sys.path.insert(0, str(SRC))
 from services import SERVICES  # noqa: E402
 SVC = {x["slug"]: x for x in SERVICES}
 S = json.loads((ROOT / "site.json").read_text())
-UPDATED_ISO = "2026-11-14"          # change when page content changes
-UPDATED = "November 14, 2026"
+UPDATED_ISO = "2026-11-16"          # change when page content changes
+UPDATED = "November 16, 2026"
 URL = S["url"]
 
 PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
@@ -211,7 +211,7 @@ def service_body(sv):
 <p>New patients: <strong>$139</strong> exam, cleaning and 4 digital X-rays. Emergency exam <strong>$59</strong>.</p>
 <a class="btn" href="/#book" data-book>Request an appointment</a>
 <a class="side-tel" href="tel:+16173254100">(617) 325-4100</a>
-<p class="side-small">Mon–Fri 9–5 · Sat 9–3 · Sun closed<br>1208B VFW Parkway, Suite 307, West Roxbury</p>
+<p class="side-small">Mon–Fri 9–5 · Sat 9–3 · Sun closed<br>1208B VFW Parkway, Suite 307, West Roxbury<br><a href="/contact/#map">Map and directions</a></p>
 </div></div>
 </div>
 <section class="wrap svc-related" aria-labelledby="rel-h"><h2 id="rel-h">Related services</h2><div class="tiles rel">{rel}</div></section>
