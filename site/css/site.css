@@ -503,3 +503,4 @@ html:not(.js) .map-box{display:none}
 .pg-band a:not(.btn){color:inherit}
 .pg-band .updated{margin:0;opacity:.8;font-size:var(--step-small)}
 .pg-band .pg-lead{max-width:52ch}
+.pg-band .open-line{color:var(--gold)}
