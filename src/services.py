@@ -331,15 +331,6 @@ SERVICES = [
 <li><strong>Broken or knocked-out teeth:</strong> repair with bonding or a <a href="/dental-crowns-and-bridges/">crown</a>, or replacement with an <a href="/dental-implants/">implant</a> or bridge.</li>
 <li><strong>Lost fillings or crowns:</strong> replaced or repaired the same day.</li>
 </ul>"""),
-  ("What to do while you wait", """
-<ul>
-<li><strong>Lost filling or crown:</strong> cover the spot with sugarless gum or dental wax.</li>
-<li><strong>Severe pain:</strong> take an over-the-counter pain reliever as directed.</li>
-<li><strong>Bleeding:</strong> bite gently on clean gauze.</li>
-<li><strong>Swelling:</strong> hold a cold compress on the outside of your cheek.</li>
-<li><strong>Knocked-out tooth:</strong> hold it by the crown, not the root, rinse gently and keep it in milk or saliva. Come in right away.</li>
-</ul>
-<p>If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room.</p>"""),
  ],
  "faqs": [
   ("Do you offer same-day emergency care?", "Yes. We set aside time every day for emergencies. Call (617) 325-4100 and we’ll do our best to see you today."),
@@ -347,7 +338,7 @@ SERVICES = [
   ("How much is an emergency visit?", "The emergency exam is $59. Treatment costs depend on the problem, and you’ll get a clear estimate before we begin."),
   ("Do you accept insurance for emergencies?", "We work with most plans and help you use your benefits. Payment options are available."),
   ("What should I do if a tooth gets knocked out?", "Hold it by the crown, not the root, rinse it gently and keep it in milk or saliva. Call (617) 325-4100 and come in right away. Don’t put a child’s baby tooth back in; call us for instructions."),
-  ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5 and Saturday 9–3. Outside those hours, use the “What to do while you wait” tips on this page and call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
+  ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5 and Saturday 9–3. Outside those hours, call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
  ],
  "related": ["tooth-extraction", "dental-crowns-and-bridges", "pediatric-dentistry"],
 },
