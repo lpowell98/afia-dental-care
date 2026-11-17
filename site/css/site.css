@@ -358,14 +358,14 @@ iframe[id^="self-scheduling-widget-button-iframe"]{display:none!important}
 
 /* ───── service pages ───── */
 .svc-hero{background:var(--deep);color:var(--on-deep);overflow:hidden}
-.svc-hero-in{display:grid;grid-template-columns:repeat(12,1fr);gap:32px clamp(16px,2vw,28px);align-items:center;padding-block:clamp(40px,5vw,72px) clamp(56px,6vw,96px)}
+.svc-hero-in{display:grid;grid-template-columns:repeat(12,1fr);gap:32px clamp(16px,2vw,28px);align-items:center;padding-block:clamp(36px,4.5vw,64px) clamp(48px,5.5vw,88px)}
 .svc-hero-text{grid-column:1/8}
 .crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:var(--step-small);opacity:.85;margin-bottom:clamp(18px,2vw,28px)}
 .crumbs a{text-underline-offset:4px}
 .svc-hero h1{font-size:clamp(2.4rem,1.4rem + 4vw,5rem);line-height:.95}
 .svc-lead{margin-top:clamp(18px,2vw,26px);font-size:var(--step-lead);line-height:1.4;max-width:46ch}
 .svc-hero .hero-actions{justify-content:flex-start}
-.svc-hero-img{grid-column:8/13;aspect-ratio:1/1;width:100%;max-width:440px;justify-self:end}
+.svc-hero-img{grid-column:9/13;aspect-ratio:1/1;width:100%;max-width:360px;justify-self:end}
 .svc-body{display:grid;grid-template-columns:repeat(12,1fr);gap:0 clamp(16px,2vw,28px);padding-block:clamp(56px,7vw,104px) clamp(40px,5vw,72px)}
 .svc-article{grid-column:1/9;max-width:68ch}
 .svc-article h2{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);letter-spacing:-.03em;line-height:1.05;margin:56px 0 16px}
@@ -391,7 +391,7 @@ iframe[id^="self-scheduling-widget-button-iframe"]{display:none!important}
 .more-svc a:hover{background:var(--surface-2)}
 @media (max-width:900px){
   .svc-hero-text{grid-column:1/13}
-  .svc-hero-img{grid-column:1/13;justify-self:start;max-width:300px}
+  .svc-hero-img{grid-column:1/13;justify-self:start;max-width:240px}
   .svc-article,.svc-side{grid-column:1/13}
   .svc-side{margin-top:48px}
 }
@@ -510,4 +510,15 @@ html:not(.js) .map-box{display:none}
 @media (max-width:900px){
   .pg-band-in .pg-head{grid-column:1/13}
   .pg-img{grid-column:1/13;justify-self:start;max-width:240px}
+}
+/* Same band height on every inner page (matches New patients); phones keep natural height */
+@media (min-width:901px){
+  .pg-band,.svc-hero{display:grid;align-items:center;min-height:var(--band-h,488px)}
+  .pg-band-in,.svc-hero-in{padding-block:48px}
+  .svc-hero-text{grid-column:1/9}
+  .svc-hero h1{font-size:clamp(2.4rem,1.2rem + 3.2vw,4.25rem)}
+  .svc-lead{max-width:none;margin-top:16px;font-size:clamp(1.125rem,1rem + .5vw,1.375rem)}
+  .svc-hero .hero-actions{margin-top:24px}
+  .svc-lead{line-height:1.35}
+  .svc-hero .crumbs,.pg-band .crumbs{margin-bottom:16px}
 }
