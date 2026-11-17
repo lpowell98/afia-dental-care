@@ -315,39 +315,22 @@ SERVICES = [
  "img": "family", "alt": "Smiling boy in the dental chair with his dental team",
  "lead": "Severe toothache? Broken or knocked-out tooth? We keep time in our schedule every day for emergencies, so you don’t have to wait in pain. Call {call} now and we’ll do everything we can to see you today. Emergency exams are <strong>$59</strong>.",
  "sections": [
-  ("When to call an emergency dentist", """
-<ul>
-<li><strong>Severe or lasting pain</strong> that over-the-counter pain relievers don’t help</li>
-<li><strong>Swelling or an abscess</strong>, a sign of infection that needs prompt treatment</li>
-<li><strong>A broken, chipped, loose or knocked-out tooth</strong></li>
-<li><strong>A lost filling or crown</strong>, which leaves the tooth open to infection</li>
-<li><strong>Bleeding that won’t stop</strong></li>
+  ("What to do right now", """
+<p>Call {call} first. Then, while you wait:</p>
+<ul class="er-list">
+<li><h3>Toothache or swelling</h3><p><strong>Now:</strong> take an over-the-counter pain reliever as directed, and hold a cold compress on the outside of your cheek for swelling.</p><p><strong>We’ll:</strong> find the cause, prescribe antibiotics if needed, and remove the source with a root canal or <a href="/tooth-extraction/">extraction</a>.</p></li>
+<li><h3>Broken, chipped or loose tooth</h3><p><strong>Now:</strong> call us and come in today.</p><p><strong>We’ll:</strong> repair it with bonding or a <a href="/dental-crowns-and-bridges/">crown</a>, or replace it with an <a href="/dental-implants/">implant</a> or bridge.</p></li>
+<li><h3>Knocked-out tooth</h3><p><strong>Now:</strong> hold it by the crown, not the root, rinse it gently and keep it in milk or saliva. Come in right away. Don’t put a child’s baby tooth back in; call us for instructions.</p><p><strong>We’ll:</strong> see you right away, and replace the tooth with an implant or bridge if it can’t be saved.</p></li>
+<li><h3>Lost filling or crown</h3><p><strong>Now:</strong> cover the spot with sugarless gum or dental wax.</p><p><strong>We’ll:</strong> replace or repair it the same day.</p></li>
+<li><h3>Bleeding that won’t stop</h3><p><strong>Now:</strong> bite gently on clean gauze.</p><p><strong>We’ll:</strong> find and treat the cause.</p></li>
 </ul>
-<p>Minor tooth or gum soreness that lasts more than two days should also be checked.</p>"""),
-  ("How we treat dental emergencies", """
-<p>We start with a quick exam to find the cause, then relieve the pain and stabilize the problem.</p>
-<ul>
-<li><strong>Toothaches and infections:</strong> antibiotics if needed, and treatment such as a root canal or <a href="/tooth-extraction/">extraction</a> to remove the source.</li>
-<li><strong>Broken or knocked-out teeth:</strong> repair with bonding or a <a href="/dental-crowns-and-bridges/">crown</a>, or replacement with an <a href="/dental-implants/">implant</a> or bridge.</li>
-<li><strong>Lost fillings or crowns:</strong> replaced or repaired the same day.</li>
-</ul>"""),
-  ("What to do while you wait", """
-<ul>
-<li><strong>Lost filling or crown:</strong> cover the spot with sugarless gum or dental wax.</li>
-<li><strong>Severe pain:</strong> take an over-the-counter pain reliever as directed.</li>
-<li><strong>Bleeding:</strong> bite gently on clean gauze.</li>
-<li><strong>Swelling:</strong> hold a cold compress on the outside of your cheek.</li>
-<li><strong>Knocked-out tooth:</strong> hold it by the crown, not the root, rinse gently and keep it in milk or saliva. Come in right away.</li>
-</ul>
-<p>If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room.</p>"""),
+<p>Minor tooth or gum soreness that lasts more than two days should also be checked.</p>
+<p class="er-911"><strong>Call 911 or go to the nearest emergency room</strong> if you have trouble breathing or swallowing, or swelling spreading toward your eye or neck.</p>"""),
  ],
  "faqs": [
-  ("Do you offer same-day emergency care?", "Yes. We set aside time every day for emergencies. Call (617) 325-4100 and we’ll do our best to see you today."),
+  ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5 and Saturday 9–3. Outside those hours, follow the “What to do right now” steps on this page and call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
   ("Do you take walk-ins for emergencies?", "Walk-ins are welcome during office hours. Calling first helps us prepare and shortens your wait."),
-  ("How much is an emergency visit?", "The emergency exam is $59. Treatment costs depend on the problem, and you’ll get a clear estimate before we begin."),
   ("Do you accept insurance for emergencies?", "We work with most plans and help you use your benefits. Payment options are available."),
-  ("What should I do if a tooth gets knocked out?", "Hold it by the crown, not the root, rinse it gently and keep it in milk or saliva. Call (617) 325-4100 and come in right away. Don’t put a child’s baby tooth back in; call us for instructions."),
-  ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5 and Saturday 9–3. Outside those hours, use the “What to do while you wait” tips on this page and call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
  ],
  "related": ["tooth-extraction", "dental-crowns-and-bridges", "pediatric-dentistry"],
 },
