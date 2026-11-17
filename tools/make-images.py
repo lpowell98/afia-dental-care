@@ -12,7 +12,7 @@ PAGES = {"home": ("Dentist in West Roxbury, MA", "Afia Dental"),
          "privacy": ("Afia Dental", "Privacy Policy"), "terms": ("Afia Dental", "Terms of Use"),
          "disclaimer": ("Afia Dental", "Disclaimer"), "accessibility": ("Afia Dental", "Accessibility"),
          "404": ("Afia Dental", "Page not found")}
-PAGES.update({"contact": ("Afia Dental · West Roxbury, MA", "Contact & Directions"), "our-dentists": ("Afia Dental · West Roxbury, MA", "Our Dentists")})
+PAGES.update({"contact": ("Afia Dental · West Roxbury, MA", "Contact & Directions"), "our-dentists": ("Afia Dental · West Roxbury, MA", "Our Dentists"), "new-patients": ("Afia Dental · West Roxbury, MA", "New Patients")})
 PAGES.update({x["slug"]: ("Afia Dental · West Roxbury, MA", x["name"]) for x in SERVICES})
 import base64
 FONT = "data:font/woff2;base64," + base64.b64encode((OUT / "fonts/bricolage-grotesque.woff2").read_bytes()).decode()
