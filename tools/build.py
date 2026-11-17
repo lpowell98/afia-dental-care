@@ -34,6 +34,10 @@ PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
      "Call (617) 325-4100, book online or visit Afia Dental at 1208B VFW Parkway, Suite 307 in the Ingleside Mall, West Roxbury. Hours, parking and directions.", True),
     ("new-patients", "New Patients | Afia Dental, West Roxbury MA",
      "New to Afia Dental? Your $139 first visit includes an exam, cleaning and 4 digital X-rays. What to bring, insurance and payment options in West Roxbury.", True),
+    ("notice-of-privacy-practices", "Notice of Privacy Practices | Afia Dental",
+     "How Afia Dental may use and share your dental and health information, your rights under HIPAA, and how to contact our Privacy Officer or file a complaint.", True),
+    ("nondiscrimination", "Nondiscrimination & Language Help | Afia Dental",
+     "Afia Dental does not discriminate and offers free interpreters, language help and accessible formats. How to ask for help or file a grievance or complaint.", True),
     ("our-dentists", "Our Dentists in West Roxbury, MA | Afia Dental",
      "Meet owner Dr. Alla Edriss, DMD, and our West Roxbury dentists: Dr. Raza Baig, Dr. Eriselda Bano, Dr. Suky Sidhu and Dr. Natalie Sokoloff.", True),
     ("404", "Page Not Found | Afia Dental",
@@ -240,7 +244,7 @@ def build():
                 else:
                     body = BAR.replace("{body}", body) + "\n{{FOOTER}}\n"
         body = body.replace("{{FOOTER}}", footer).replace("{{TOPBAR}}", topbar)
-        body = body.replace("{{UPDATED}}", UPDATED).replace("{{EMAIL_SENTENCE}}", email_sentence).replace("{{EMAIL}}", S.get("email", ""))
+        body = body.replace("{{NPP_EFFECTIVE}}", S.get("nppEffective") or "to be set when Afia Dental adopts this notice").replace("{{UPDATED}}", UPDATED).replace("{{EMAIL_SENTENCE}}", email_sentence).replace("{{EMAIL}}", S.get("email", ""))
         head = HEAD.format(title=html.escape(title), desc=html.escape(desc), canon=page_url(slug),
                            robots='<meta name="robots" content="noindex">\n' if not index else "",
                            theme=S["themeColor"], name=S["name"], url=URL, og=slug or "home",
