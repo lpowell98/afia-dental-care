@@ -239,10 +239,14 @@ def build():
         else:
             body = (SRC / f"pages/{slug or 'index'}.html").read_text()
             if slug:
-                if body.startswith("<!--wide-->"):
-                    body = BAR.replace('<main id="main" class="wrap doc">', '<main id="main" class="wrap page">').replace("{body}", body[len("<!--wide-->"):].lstrip()) + "\n{{FOOTER}}\n"
-                else:
-                    body = BAR.replace("{body}", body) + "\n{{FOOTER}}\n"
+                wide = body.startswith("<!--wide-->")
+                inner = body[len("<!--wide-->"):].lstrip() if wide else body
+                # Green band at the top of inner pages (matches the service-page hero)
+                m = re.match(r'\s*(<div class="pg-head">.*?</div>)\s*', inner, re.S) if wide else \
+                    re.match(r'\s*(<h1>.*?</h1>\s*(?:<p class="updated">.*?</p>)?)\s*', inner, re.S)
+                top = m.group(1) if wide else f'<div class="pg-head">{m.group(1)}</div>'
+                body = (HEADER + f'<main id="main">\n<section class="pg-band"><div class="wrap">{top}</div></section>\n'
+                        f'<div class="wrap {"page" if wide else "doc"}">\n{inner[m.end():]}</div></main>\n' + "\n{{FOOTER}}\n")
         body = body.replace("{{FOOTER}}", footer).replace("{{TOPBAR}}", topbar)
         body = body.replace("{{NPP_EFFECTIVE}}", S.get("nppEffective") or "to be set when Afia Dental adopts this notice").replace("{{UPDATED}}", UPDATED).replace("{{EMAIL_SENTENCE}}", email_sentence).replace("{{EMAIL}}", S.get("email", ""))
         head = HEAD.format(title=html.escape(title), desc=html.escape(desc), canon=page_url(slug),
