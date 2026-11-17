@@ -101,7 +101,7 @@ def graph(slug, title, body):
                "image": f"{URL}/img/{d['id']}.webp", "url": f"{page_url(slug)}#{d['id']}",
                "worksFor": {"@id": f"{URL}/#business"}, **({"alumniOf": [{"@type": "CollegeOrUniversity", "name": n} for n in d["alumniOf"]]} if d.get("alumniOf") else {})}
               for d in S["dentists"]]
-    if slug == "new-patients":
+    if slug == "new-patients" and "<details" in body:
         g.append(faq(body, f"{page_url(slug)}#faq"))
     if slug == "contact":
         g.append({"@type": "ContactPage", "@id": page_url(slug), "url": page_url(slug), "name": title.split(" | ")[0], "about": {"@id": f"{URL}/#business"}})
