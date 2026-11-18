@@ -537,3 +537,4 @@ html:not(.js) .map-box{display:none}
   .preview{justify-self:center}
   .preview p{text-align:center}
 }
+.np-pay{margin-top:0;margin-bottom:clamp(48px,6vw,80px)}
