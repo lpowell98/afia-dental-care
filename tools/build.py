@@ -21,7 +21,7 @@ URL = S["url"]
 
 PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
     ("", "Dentist in West Roxbury, MA | Afia Dental",
-     "Family and cosmetic dentistry in West Roxbury for over 40 years. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
+     "Family and cosmetic dentistry in West Roxbury for over 40 years, open Saturdays. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
     ("privacy", "Privacy Policy | Afia Dental",
      "How the Afia Dental website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.", True),
     ("terms", "Terms of Use | Afia Dental",
