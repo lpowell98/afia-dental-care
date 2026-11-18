@@ -538,3 +538,11 @@ html:not(.js) .map-box{display:none}
   .preview p{text-align:center}
 }
 .np-pay{margin-top:0;margin-bottom:clamp(48px,6vw,80px)}
+/* Contact: map box ends level with the hours (desktop) */
+@media (min-width:901px){
+  .contact-two{grid-template-rows:auto auto auto;row-gap:0}
+  .contact-two > section{grid-row:1/4;display:grid;grid-template-rows:subgrid;align-content:start}
+  .contact-two .map-box{aspect-ratio:auto;height:100%;min-height:0}
+  .contact-two .c-find{align-self:start}
+  .c-hours-body .c-note{margin-bottom:0}
+}
