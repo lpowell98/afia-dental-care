@@ -529,3 +529,11 @@ html:not(.js) .map-box{display:none}
   .np-pay .plans{flex-wrap:nowrap}
   .np-pay .plans li{flex:1 1 0;min-width:0;padding:12px 8px;font-size:16px}
 }
+/* Homepage "Meet our dentists": intro, photo and bio share one centered column (desktop) */
+@media (min-width:901px){
+  .team-head{display:grid;grid-template-columns:subgrid;grid-column:1/13;align-items:end}
+  .team-head h2{grid-column:1/9}
+  .team-head p{grid-column:9/13;max-width:none;text-align:center}
+  .preview{justify-self:center}
+  .preview p{text-align:center}
+}
