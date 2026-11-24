@@ -11,6 +11,7 @@ const MAX_AGE = 60 * 60 * 24 * 30; // stay unlocked 30 days per browser
 const PUBLIC = new Set([
   "/icon-192.png", "/icon-512.png", "/favicon-32.png",
   "/favicon.svg", "/apple-touch-icon.png",
+  "/img/brand/afia-email-signature-logo.png",
 ]);
 
 async function sha256(text) {
