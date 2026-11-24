@@ -23,9 +23,8 @@
   --ease:cubic-bezier(.2,.7,.2,1);
   --sec:clamp(104px,11vw,168px);
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#0F1C1A; --surface:#172926; --surface-2:#1F3531; --ink:#E8F0ED; --ink-soft:#A8BDB7; color-scheme:dark}}
-:root[data-theme="dark"]{--ground:#0F1C1A; --surface:#172926; --surface-2:#1F3531; --ink:#E8F0ED; --ink-soft:#A8BDB7; color-scheme:dark}
+/* always dark, whatever the device setting */
+:root{--ground:#0F1C1A; --surface:#172926; --surface-2:#1F3531; --ink:#E8F0ED; --ink-soft:#A8BDB7; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
