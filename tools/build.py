@@ -196,6 +196,8 @@ def service_body(sv):
     from PIL import Image
     w, h = Image.open(OUT / f"img/{sv['img']}.webp").size
     h1 = sv["title"].split(" | ")[0]
+    w = h1.split(" "); keep = {"West", "Roxbury,", "MA", "Invisalign", "Invisalign®", "X-rays"}
+    h1 = " ".join([w[0]] + [x if x in keep else x.lower() for x in w[1:]])  # sentence case (brand guide p.15)
     secs = notr("".join(f'<h2>{hd}</h2>\n{bd.strip()}\n' for hd, bd in sv["sections"]))
     qs = notr("".join(f'<details name="faq"><summary>{q}<span class="plus"></span></summary><p>{a}</p></details>\n'
                  for q, a in sv["faqs"]))

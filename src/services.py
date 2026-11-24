@@ -10,7 +10,7 @@ CALL = '<a href="tel:+16173254100">(617) 325-4100</a>'
 SERVICES = [
 {
  "slug": "dental-implants",
- "name": "Dental Implants",
+ "name": "Dental implants",
  "title": "Dental Implants in West Roxbury, MA | Afia Dental",
  "desc": "Replace missing teeth with dental implants in West Roxbury, MA: single implants, bridges and full-arch options like All-on-4®, with clear estimates and financing.",
  "img": "implants", "alt": "Gloved hands holding a model of an implant-supported denture",
@@ -31,7 +31,7 @@ SERVICES = [
 <li><strong>Protects your jaw.</strong> Implants stimulate the bone, which helps prevent the bone loss and shifting that follow a missing tooth.</li>
 <li><strong>Looks real.</strong> Crowns are color-matched to your teeth, so most people can’t tell the difference.</li>
 </ul>"""),
-  ("After the procedure", """
+  ("After your implant", """
 <p>Mild swelling, tenderness or a little bleeding is normal for a few days and usually eases with over-the-counter pain relief. Stick to soft foods for the first week. Dissolvable stitches usually fall out within 7–10&nbsp;days. We give you written aftercare instructions and you can call us with any questions.</p>"""),
   ("Caring for your implants", """
 <p>Treat implants like natural teeth: brush twice a day, floss daily and keep up with check-ups and cleanings. If you have implant-supported dentures, take them out at night and soak them in a cleaning solution. A water flosser helps clean around the gumline.</p>"""),
@@ -58,7 +58,7 @@ SERVICES = [
 <p>Treatment starts with a consultation. Your dentist checks your teeth and talks through your goals. We take digital scans (no messy impressions) and build a 3D plan that shows how your teeth will move, step by step.</p>
 <p>You wear each set of aligners <strong>20–22&nbsp;hours a day</strong>, taking them out only to eat, drink, brush and floss, and switch to a new set every one to two weeks. Most patients notice changes within a few weeks, and many finish in <strong>6 to 12&nbsp;months</strong>, depending on the case.</p>"""),
   ("How your trays are made", """
-<p>Your scans and treatment plan go to the Invisalign lab, where your aligners are custom-made from a smooth, flexible material called SmartTrack and trimmed to your gumline for comfort. When they arrive, we check the fit and show you how to wear and clean them. Most patients start within a few weeks.</p>"""),
+<p>Your scans and plan go to the Invisalign lab, where your aligners are custom-made from a smooth, flexible material called SmartTrack and trimmed to your gumline for comfort. When they arrive, we check the fit and show you how to wear and clean them. Most patients start within a few weeks.</p>"""),
   ("Benefits of Invisalign®", """
 <ul>
 <li><strong>Discreet.</strong> The aligners are clear, so most people won’t notice them.</li>
@@ -81,7 +81,7 @@ SERVICES = [
 },
 {
  "slug": "cosmetic-dentistry",
- "name": "Cosmetic Dentistry",
+ "name": "Cosmetic dentistry",
  "title": "Cosmetic Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Teeth whitening, veneers, bonding, Invisalign® and natural-looking crowns in West Roxbury, MA. A small touch-up or a full smile makeover, planned around you.",
  "img": "same-day-crowns", "alt": "Smiling patient as her dentist matches a tooth shade",
@@ -116,7 +116,7 @@ SERVICES = [
 },
 {
  "slug": "dental-crowns-and-bridges",
- "name": "Crowns & Bridges",
+ "name": "Crowns & bridges",
  "title": "Dental Crowns and Bridges in West Roxbury, MA | Afia Dental",
  "desc": "Dental crowns and bridges in West Roxbury, MA, including same-day crowns. Restore broken, decayed or missing teeth with natural-looking results.",
  "img": "same-day-crowns", "alt": "Smiling patient as her dentist matches a tooth shade",
@@ -152,7 +152,7 @@ SERVICES = [
 },
 {
  "slug": "tooth-extraction",
- "name": "Tooth Extraction",
+ "name": "Tooth extraction",
  "title": "Tooth Extraction in West Roxbury, MA | Afia Dental",
  "desc": "Gentle simple and surgical tooth extractions, including wisdom teeth, in West Roxbury, MA. Comfort-first care, clear aftercare and same-day emergencies.",
  "img": "family", "alt": "Smiling boy in the dental chair with his dental team",
@@ -174,7 +174,7 @@ SERVICES = [
  ],
  "faqs": [
   ("How long does recovery take?", "Most simple extractions heal in 3–5&nbsp;days. Surgical extractions, like wisdom teeth, can take 1–2&nbsp;weeks. Following the aftercare instructions speeds healing."),
-  ("Is a tooth extraction painful?", "You won’t feel pain during the procedure because the area is numb, and sedation is available. Some soreness afterward is normal and manageable with over-the-counter pain relievers."),
+  ("Is a tooth extraction painful?", "You won’t feel pain during the extraction because the area is numb, and sedation is available. Some soreness afterward is normal and manageable with over-the-counter pain relievers."),
   ("Do you do emergency extractions?", "Yes. For severe pain, swelling or infection, call (617) 325-4100 and we’ll do our best to see you the same day."),
   ("How much does an extraction cost?", "It depends on whether it’s simple or surgical. You’ll get a clear estimate before treatment. We accept most insurance plans and offer payment plans."),
   ("Can I replace the tooth later?", "Yes. Once you’ve healed, we’ll review implants, bridges and partial dentures with you."),
@@ -183,7 +183,7 @@ SERVICES = [
 },
 {
  "slug": "preventative-dentistry",
- "name": "Preventative Dentistry",
+ "name": "Preventative dentistry",
  "title": "Preventative Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Exams, cleanings, digital X-rays, fluoride and sealants in West Roxbury, MA. Stop cavities and gum disease early with a prevention plan made for you.",
  "img": "cleanings", "alt": "Smiling patient with her hygienist and dentist during a check-up",
@@ -201,17 +201,17 @@ SERVICES = [
 <p>Brush twice a day with fluoride toothpaste, floss daily, limit sugary and acidic snacks and drinks, drink water and avoid tobacco. These habits, plus regular visits, keep teeth strong and gums healthy.</p>"""),
  ],
  "faqs": [
-  ("How often should I have a check-up?", "Most patients every six months. We may suggest more frequent visits depending on your oral health."),
+  ("How often should I have a check-up?", "Most patients every six months. We may suggest more frequent visits depending on the health of your teeth and gums."),
   ("What’s included in a preventive visit?", "A thorough exam, professional cleaning, oral cancer screening, digital X-rays when needed, and advice for caring for your teeth at home."),
   ("Do children need preventive care?", "Yes. It catches decay early, guides healthy development and builds good habits. Fluoride and sealants add extra protection for kids. See <a href=\"/pediatric-dentistry/\">pediatric dentistry</a>."),
   ("Is preventive care covered by insurance?", "Most plans cover exams, cleanings and X-rays, often at little or no cost. We’ll help you understand your coverage before your visit."),
-  ("Can preventive care help with health conditions?", "Yes. It’s especially important for people with diabetes, heart disease or breathing problems, because oral health is linked to overall health."),
+  ("Can preventive care help with health conditions?", "Yes. It’s especially important for people with diabetes, heart disease or breathing problems, because the health of your mouth affects the rest of your body."),
  ],
  "related": ["dental-check-ups", "pediatric-dentistry", "restorative-dentistry"],
 },
 {
  "slug": "dental-check-ups",
- "name": "Check-ups & Cleanings",
+ "name": "Check-ups & cleanings",
  "title": "Dental Check-ups in West Roxbury, MA | Afia Dental",
  "desc": "Dental check-ups and cleanings in West Roxbury, MA: exam, professional cleaning, oral cancer screening and digital X-rays. New patients $139. Book online.",
  "img": "cleanings", "alt": "Smiling patient with her hygienist and dentist during a check-up",
@@ -242,16 +242,16 @@ SERVICES = [
 },
 {
  "slug": "restorative-dentistry",
- "name": "Restorative Dentistry",
+ "name": "Restorative dentistry",
  "title": "Restorative Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Tooth-colored fillings, crowns, bridges, implants and dentures in West Roxbury, MA. Repair damaged teeth and replace missing ones with natural-looking results.",
  "img": "same-day-crowns", "alt": "Smiling patient as her dentist matches a tooth shade",
  "lead": "A damaged or missing tooth makes everyday things like eating, speaking and smiling harder. Restorative dentistry repairs teeth, replaces what’s missing and brings your smile back to full function, from tooth-colored fillings to crowns, bridges, implants and dentures.",
  "sections": [
   ("Benefits of restorative dentistry", """
-<p>Restorations do more than fix damage. They protect neighboring teeth, help prevent gum problems and lower the risk of bone loss. A <a href="/dental-crowns-and-bridges/">crown</a> keeps a weak tooth from breaking; an <a href="/dental-implants/">implant</a> keeps the jawbone strong and stops teeth from drifting. Treating problems early means fewer complications and more comfortable chewing.</p>"""),
-  ("Direct and indirect restorations", """
-<p><strong>Direct restorations</strong> are done in one visit, right in the mouth, like tooth-colored fillings. <strong>Indirect restorations</strong> are made to fit outside the mouth, like inlays, onlays, veneers and crowns, and are best for larger damage. Bridges, implants and dentures replace missing teeth. Your dentist will recommend what fits your tooth and your budget.</p>"""),
+<p>Fixing a tooth does more than repair the damage. They protect neighboring teeth, help prevent gum problems and lower the risk of bone loss. A <a href="/dental-crowns-and-bridges/">crown</a> keeps a weak tooth from breaking; an <a href="/dental-implants/">implant</a> keeps the jawbone strong and stops teeth from drifting. Treating problems early means fewer complications and more comfortable chewing.</p>"""),
+  ("Fillings or crowns: what’s the difference?", """
+<p><strong>Fillings</strong> are done in one visit, right in your mouth, with tooth-colored material. <strong>Crowns, inlays, onlays and veneers</strong> are shaped to fit your tooth, then bonded in place, and are best for larger damage. Bridges, implants and dentures replace missing teeth. Your dentist will recommend what fits your tooth and your budget.</p>"""),
   ("Care for every age", """
 <ul>
 <li><strong>Children and teens:</strong> repairs that protect developing teeth and allow for growth.</li>
@@ -261,7 +261,7 @@ SERVICES = [
 <p>Most care happens here under one roof. If you need a treatment we don’t provide, we’ll refer you to a trusted specialist.</p>"""),
  ],
  "faqs": [
-  ("What’s the most common restoration?", "Tooth-colored fillings for cavities. Larger damage usually needs an inlay, onlay or crown."),
+  ("What’s the most common repair?", "Tooth-colored fillings for cavities. Larger damage usually needs an inlay, onlay or crown."),
   ("How do I replace a missing tooth?", "With an implant, a bridge or a partial denture. We’ll compare cost, comfort and how long each lasts for your situation."),
   ("Are tooth-colored fillings as strong as silver ones?", "Modern composite fillings are strong and durable for most teeth, and they bond to the tooth and blend in."),
   ("Does insurance cover restorative work?", "Most plans cover part of fillings, crowns and bridges. We’ll check your benefits and offer payment options for the rest."),
@@ -272,7 +272,7 @@ SERVICES = [
 },
 {
  "slug": "pediatric-dentistry",
- "name": "Pediatric Dentistry",
+ "name": "Pediatric dentistry",
  "title": "Pediatric Dentistry in West Roxbury, MA | Afia Dental",
  "desc": "Gentle children’s dentistry in West Roxbury, MA with Dr. Eriselda Bano: first visits, cleanings, fluoride, sealants, fillings and kids’ emergencies.",
  "img": "pediatric", "alt": "Smiling girl in the dental chair with her mother and dentist",
@@ -309,7 +309,7 @@ SERVICES = [
 },
 {
  "slug": "dental-emergencies",
- "name": "Emergency Dentist",
+ "name": "Emergency dentist",
  "title": "Emergency Dentist in West Roxbury, MA | Afia Dental",
  "desc": "Severe toothache, broken or knocked-out tooth? Same-day emergency dental care in West Roxbury, MA. $59 emergency exam. Call (617) 325-4100 now.",
  "img": "family", "alt": "Smiling boy in the dental chair with his dental team",
