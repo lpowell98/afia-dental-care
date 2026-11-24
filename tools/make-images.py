@@ -5,8 +5,10 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent; OUT = ROOT / "site"
 import sys; sys.path.insert(0, str(ROOT / "src")); from services import SERVICES
-TOOTH = 'M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z'
-FAV = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#1E3A35"/><g transform="translate(5 4)"><path d="{TOOTH}" fill="#D6A653"/></g></svg>'
+# Tooth-A mark and app icon, from the supplied brand file afia-app-icon.svg (never redraw)
+TOOTH = 'M50 15 C56 9 66 6 74 9 C84 13 86 26 83 38 C81 47 79 53 79 60 L84 88 C85 93 79 96 76 91 L60 64 C57 59 43 59 40 64 L24 91 C21 96 15 93 16 88 L21 60 C21 53 19 47 17 38 C14 26 16 13 26 9 C34 6 44 9 50 15 Z M50 31 C49 31 48.6 31.4 48.2 32.2 L40.6 48.6 C40 50 40.7 51 42.2 51 L57.8 51 C59.3 51 60 50 59.4 48.6 L51.8 32.2 C51.4 31.4 51 31 50 31 Z'
+def app_icon(rx=22): return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="{rx}" fill="#1E3A35"/><path transform="translate(18 17) scale(0.64)" fill="#D6A653" fill-rule="evenodd" d="{TOOTH}"/></svg>'
+FAV = app_icon()
 (OUT / "favicon.svg").write_text(FAV + "\n")
 PAGES = {"home": ("Dentist in West Roxbury, MA", "Afia Dental"),
          "privacy": ("Afia Dental", "Privacy Policy"), "terms": ("Afia Dental", "Terms of Use"),
@@ -21,14 +23,15 @@ def og(kick, title):
 body{{margin:0;width:1200px;height:630px;background:#1E3A35;color:#F1F5F3;font-family:B;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}}
 small{{font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:#EBD3A6;font-weight:500}}
 h1{{font-size:{'128' if len(title)<18 else '104'}px;font-weight:600;letter-spacing:-.05em;line-height:.95;margin:22px 60px 0}}
-svg.arc{{width:440px;margin-top:22px;color:#D6A653}} p{{font-size:28px;margin-top:34px;opacity:.9}}</style></head><body>
-<small>{kick}</small><h1>{title}</h1><svg class="arc" viewBox="0 0 400 60"><path d="M4 6 Q200 112 396 6 Q200 64 4 6 Z" fill="currentColor"/></svg>
+p{{font-size:28px;margin-top:34px;opacity:.9}}</style></head><body>
+<small>{kick}</small><h1>{title}</h1>
 <p>1208B VFW Parkway, West Roxbury · (617) 325-4100</p></body></html>'''
 with sync_playwright() as p:
     b = p.chromium.launch()
-    for name, size in [("favicon-32.png", 32), ("icon-192.png", 192), ("icon-512.png", 512), ("apple-touch-icon.png", 180)]:
+    # apple-touch-icon is full-bleed: iOS rounds the corners itself
+    for name, size, svg in [("favicon-32.png", 32, FAV), ("icon-192.png", 192, FAV), ("icon-512.png", 512, FAV), ("apple-touch-icon.png", 180, app_icon(0))]:
         pg = b.new_page(viewport={"width": size, "height": size})
-        pg.set_content(f'<body style="margin:0">{FAV.replace("<svg ", f"<svg width={size} height={size} ")}</body>')
+        pg.set_content(f'<body style="margin:0">{svg.replace("<svg ", f"<svg width={size} height={size} ")}</body>')
         pg.screenshot(path=str(OUT / name), omit_background=True); pg.close()
     for slug, (k, t) in PAGES.items():
         pg = b.new_page(viewport={"width": 1200, "height": 630}); pg.set_content(og(k, t)); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
