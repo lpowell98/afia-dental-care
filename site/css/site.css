@@ -58,7 +58,7 @@ p{margin:0}
 .mark{display:flex;align-items:center;text-decoration:none}
 .mark img{height:66px;width:auto} /* supplied lockup; keep ≥120px wide (brand guide p.11) */
 /* header phone: solid gold call button (gold = call to action, brand guide p.18) */
-.top .tel{justify-self:end;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:10px;background:var(--gold);color:var(--on-light);font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;text-decoration:none;transition:background-color .2s}
+.top .tel{justify-self:end;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px 4px;border-radius:var(--btn-radius);background:var(--gold);color:var(--on-light);font-size:16px;font-weight:500;font-variant-numeric:tabular-nums;text-decoration:none;transition:background-color .2s}
 .top .tel:hover{background:var(--gold-soft)}
 .tel-ic{width:18px;height:18px;flex:none}
 .hero-head{text-align:center;padding-block:clamp(32px,4vw,56px) clamp(48px,5vw,72px)}
