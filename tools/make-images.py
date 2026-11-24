@@ -18,13 +18,26 @@ PAGES.update({"contact": ("Afia Dental · West Roxbury, MA", "Contact & Directio
 PAGES.update({x["slug"]: ("Afia Dental · West Roxbury, MA", x["name"]) for x in SERVICES})
 import base64
 FONT = "data:font/woff2;base64," + base64.b64encode((OUT / "fonts/bricolage-grotesque.woff2").read_bytes()).decode()
-def og(kick, title):
-    return f'''<html><head><style>@font-face{{font-family:B;src:url({FONT});font-weight:200 800}}
+# Share images carry the supplied logo files (brand guide: never retype or redraw the logo)
+LOCKUP = (OUT / "img/brand/afia-lockup-on-dark.svg").read_text().strip()
+STACKED = (OUT / "img/brand/afia-lockup-stacked-on-dark.svg").read_text().strip()
+def sentence(t):  # headings in sentence case (brand guide p.15); proper nouns kept
+    keep = {"Invisalign®", "MA"}
+    w = t.split(" ")
+    return " ".join([w[0]] + [x if x in keep else x.lower() for x in w[1:]])
+def og(kick, title, home=False):
+    title = sentence(title)
+    css = f'''@font-face{{font-family:B;src:url({FONT});font-weight:200 800}}
 body{{margin:0;width:1200px;height:630px;background:#1E3A35;color:#F1F5F3;font-family:B;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}}
-small{{font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:#EBD3A6;font-weight:500}}
-h1{{font-size:{'128' if len(title)<18 else '104'}px;font-weight:600;letter-spacing:-.05em;line-height:.95;margin:22px 60px 0}}
-p{{font-size:28px;margin-top:34px;opacity:.9}}</style></head><body>
-<small>{kick}</small><h1>{title}</h1>
+.logo svg{{display:block;height:{'300' if home else '120'}px;width:auto}}
+small{{font-size:30px;letter-spacing:.14em;text-transform:uppercase;color:#EBD3A6;font-weight:500;margin-top:28px}}
+h1{{font-size:{'112' if len(title)<18 else '92'}px;font-weight:600;letter-spacing:-.05em;line-height:.95;margin:40px 60px 0}}
+p{{font-size:28px;margin-top:{'28' if home else '40'}px;opacity:.9}}'''
+    if home:
+        body = f'<div class="logo">{STACKED}</div><small>{kick}</small>'
+    else:
+        body = f'<div class="logo">{LOCKUP}</div><h1>{title}</h1>'
+    return f'''<html><head><style>{css}</style></head><body>{body}
 <p>1208B VFW Parkway, West Roxbury · (617) 325-4100</p></body></html>'''
 with sync_playwright() as p:
     b = p.chromium.launch()
@@ -34,7 +47,7 @@ with sync_playwright() as p:
         pg.set_content(f'<body style="margin:0">{svg.replace("<svg ", f"<svg width={size} height={size} ")}</body>')
         pg.screenshot(path=str(OUT / name), omit_background=True); pg.close()
     for slug, (k, t) in PAGES.items():
-        pg = b.new_page(viewport={"width": 1200, "height": 630}); pg.set_content(og(k, t)); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
+        pg = b.new_page(viewport={"width": 1200, "height": 630}); pg.set_content(og(k, t, home=(slug == "home"))); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
         pg.screenshot(path=str(OUT / f"img/og-{slug}.png")); pg.close()
     b.close()
 print("images done")
