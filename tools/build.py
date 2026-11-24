@@ -15,13 +15,13 @@ sys.path.insert(0, str(SRC))
 from services import SERVICES  # noqa: E402
 SVC = {x["slug"]: x for x in SERVICES}
 S = json.loads((ROOT / "site.json").read_text())
-UPDATED_ISO = "2026-11-16"          # change when page content changes
-UPDATED = "November 16, 2026"
+UPDATED_ISO = "2026-11-24"          # change when page content changes
+UPDATED = "November 24, 2026"
 URL = S["url"]
 
 PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
     ("", "Dentist in West Roxbury, MA | Afia Dental",
-     "Family and cosmetic dentistry in West Roxbury for over 40 years, with Saturday visits by request. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
+     "Family and cosmetic dentistry in West Roxbury for over 40 years. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
     ("privacy", "Privacy Policy | Afia Dental",
      "How the Afia Dental website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.", True),
     ("terms", "Terms of Use | Afia Dental",

@@ -16,7 +16,7 @@
   --step-body:clamp(1.0625rem,1rem + 0.25vw,1.1875rem);
   --step-lead:clamp(1.25rem,1.1rem + 0.7vw,1.625rem);
   --step-head:clamp(2rem,1.3rem + 3.2vw,4rem);
-  --step-hero:clamp(3.6rem,10vw,10rem);
+  --step-hero:clamp(2.75rem,6.5vw,6.25rem);
   --margin:max(20px,4vw);
   --smile:0 0 50% 50% / 0 0 22% 22%;
   --btn-radius:6px 6px 26px 26px / 6px 6px 18px 18px;
@@ -63,7 +63,7 @@ p{margin:0}
 .tel-ic{width:18px;height:18px;flex:none}
 .hero-head{text-align:center;padding-block:clamp(32px,4vw,56px) clamp(48px,5vw,72px)}
 .hero h1{font-size:var(--step-hero);line-height:.9;letter-spacing:-.05em}
-.hero h1 span{display:inline-block}
+.hero h1 span{display:block}
 .hero-sub{max-width:44ch;margin:clamp(18px,2vw,26px) auto 0;font-size:var(--step-lead);line-height:1.35;color:var(--on-deep)}
 .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:clamp(22px,2.4vw,32px)}
 .btn.ghost{background:transparent;color:var(--on-deep);box-shadow:inset 0 0 0 2px rgba(241,245,243,.4)}
@@ -275,7 +275,7 @@ footer{background:var(--deep);color:var(--on-deep);padding-block:clamp(48px,5vw,
   .about{min-height:0}
 }
 @media (max-width:720px){
-  .hero h1{font-size:15vw}
+  .hero h1{font-size:11.5vw}
   .hero h1 span{display:block}
   .hero-bar{grid-template-columns:1fr}
   .hero-actions .btn{flex:1 1 100%}
@@ -333,7 +333,7 @@ footer{background:var(--deep);color:var(--on-deep);padding-block:clamp(48px,5vw,
 .book-actions .btn.ghost:hover{background:rgba(241,245,243,.1)}
 .book-actions small{font-size:15px;opacity:.9}
 .foot-legal{display:flex;gap:8px 20px;flex-wrap:wrap}
-.foot-legal a{opacity:.85;text-underline-offset:4px}
+.foot-legal a{display:inline-flex;align-items:center;min-height:28px;opacity:.85;text-underline-offset:4px}
 /* inner pages */
 .bar{background:var(--deep);color:var(--on-deep)}
 .doc{max-width:72ch;padding-block:clamp(40px,5vw,72px) var(--sec)}
