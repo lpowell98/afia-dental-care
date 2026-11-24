@@ -9,7 +9,7 @@
   setTimeout(function(){els.forEach(show)},2500);
 
   /* open-now status from real hours, Boston time */
-  var H={0:null,1:[9,17],2:[9,17],3:[9,17],4:[9,17],5:[9,17],6:[9,15]};
+  var H={0:null,1:[9,17],2:[9,17],3:[9,17],4:[9,17],5:[9,17],6:null};
   var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   function fmt(h){return (h>12?h-12:h)+(h>=12?' pm':' am')}
   function tick(){

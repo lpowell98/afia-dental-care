@@ -21,7 +21,7 @@ URL = S["url"]
 
 PAGES = [  # slug, title (<60 chars), description (~140-160), indexable
     ("", "Dentist in West Roxbury, MA | Afia Dental",
-     "Family and cosmetic dentistry in West Roxbury for over 40 years, open Saturdays. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
+     "Family and cosmetic dentistry in West Roxbury for over 40 years, with Saturday visits by request. Same-day crowns, implants, Invisalign, kids' care and emergencies. Book online.", True),
     ("privacy", "Privacy Policy | Afia Dental",
      "How the Afia Dental website handles visit statistics, online booking through Simplifeye and the information you share with our West Roxbury office.", True),
     ("terms", "Terms of Use | Afia Dental",
@@ -155,7 +155,6 @@ HEAD = """<!doctype html>
 """
 
 HEADER = """<a class="skip" href="#main">Skip to content</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="tooth" viewBox="0 0 22 24"><path d="M11 3.2C8.6 1 3 .3 2 5.4c-.7 3.7 1.3 6 2 9 .6 2.5.7 8.2 3 8.2s1.9-5.6 4-5.6 1.7 5.6 4 5.6 2.4-5.7 3-8.2c.7-3 2.7-5.3 2-9C19 .3 13.4 1 11 3.2Z" fill="currentColor"/></symbol></svg>
 <header class="bar" id="top">
   {{TOPBAR}}
 </header>
@@ -222,7 +221,7 @@ def service_body(sv):
 <p>New patients: <strong>$139</strong> exam, cleaning and 4 digital X-rays. Emergency exam <strong>$59</strong>.</p>
 <a class="btn" href="/#book" data-book>Request an appointment</a>
 <a class="side-tel" href="tel:+16173254100">(617) 325-4100</a>
-<p class="side-small">Mon–Fri 9–5 · Sat 9–3 · Sun closed<br>1208B VFW Parkway, Suite 307, West Roxbury<br><a href="/contact/#map">Map and directions</a></p>
+<p class="side-small">Mon–Fri 9–5 · Sat by request · Sun closed<br>1208B VFW Parkway, Suite 307, West Roxbury<br><a href="/contact/#map">Map and directions</a></p>
 </div></div>
 </div>
 <section class="wrap svc-related" aria-labelledby="rel-h"><h2 id="rel-h">Related services</h2><div class="tiles rel">{rel}</div></section>
@@ -284,7 +283,7 @@ def build():
     (OUT / "llms.txt").write_text(
         f"# {S['name']}\n\n> {S['description']}\n\n"
         f"- Address: {a['streetAddress']}, {a['addressLocality']}, {a['addressRegion']} {a['postalCode']} (Ingleside Mall)\n"
-        f"- Phone: {S['phoneDisplay']}\n- Hours: Mon-Fri 9 am-5 pm, Sat 9 am-3 pm, Sun closed\n"
+        f"- Phone: {S['phoneDisplay']}\n- Hours: Mon-Fri 9 am-5 pm, Saturday by request, Sun closed\n"
         f"- New-patient visit $139 (exam, cleaning, 4 digital X-rays); emergency exam $59\n"
         f"- Dentists: " + "; ".join(f"{d['name']} ({d['focus'].lower()})" for d in S["dentists"]) + "\n"
         f"- Book online: {URL}/#book\n\n## Pages\n\n"

@@ -336,7 +336,7 @@ SERVICES = [
   ("Do you offer same-day emergency care?", "Yes. We set aside time every day for emergencies. Call (617) 325-4100 and we’ll do our best to see you today."),
   ("How much is an emergency visit?", "The emergency exam is $59. Treatment costs depend on the problem, and you’ll get a clear estimate before we begin."),
   ("What should I do if a tooth gets knocked out?", "Hold it by the crown, not the root, rinse it gently and keep it in milk or saliva. Call (617) 325-4100 and come in right away. Don’t put a child’s baby tooth back in; call us for instructions."),
-  ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5 and Saturday 9–3. Outside those hours, call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
+  ("What if it happens when you’re closed?", "We’re open Monday to Friday 9–5, with Saturday visits by request. Outside those hours, call us when we open. If you have trouble breathing or swallowing, or swelling spreading toward your eye or neck, call 911 or go to the nearest emergency room."),
  ],
  "related": ["tooth-extraction", "dental-crowns-and-bridges", "pediatric-dentistry"],
 },
