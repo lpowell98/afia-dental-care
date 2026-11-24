@@ -234,7 +234,7 @@ SERVICES = [
  "faqs": [
   ("How often should I come in?", "Every six months for most people. Waiting longer gives plaque time to harden into tartar, which can lead to cavities and gum disease."),
   ("What does the $139 new-patient visit include?", "A full exam, a professional cleaning and 4 digital X-rays."),
-  ("What’s the difference between a check-up and a dental exam?", "They overlap. A comprehensive exam, usually for new patients, also looks at the head and neck and gives us a complete picture of your oral health."),
+  ("What’s the difference between a check-up and a dental exam?", "They overlap. A full exam, usually at your first visit, also checks your head and neck and gives us a complete picture of your mouth."),
   ("Why do I need X-rays?", "They show decay, infection and bone problems below the gumline and between teeth that we can’t see in the mirror."),
   ("What if it’s been years since my last visit?", "That’s common and nothing to be embarrassed about. We’ll start where you are and make a plan together."),
  ],
